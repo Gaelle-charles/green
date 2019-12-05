@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<!doctype html>
+
+<!--
+    ______                                  ___  ____    _   __   _
+ .' ___  |                                |_  ||_  _|  (_) [  | / |_
+/ .'   \_| _ .--.  .---.  .---.  _ .--.     | |_/ /    __   | |`| |-' _   __
+| |   ____[ `/'`\]/ /__\\/ /__\\[ `.-. |    |  __'.   [  |  | | | |  [ \ [  ]
+\ `.___]  || |    | \__.,| \__., | | | |   _| |  \ \_  | |  | | | |,  \ '/ /
+ `._____.'[___]    '.__.' '.__.'[___||__] |____||____|[___][___]\__/[\_:  /
+                                                                     \__.'
+-->
+
+<html class="no-js" lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% block page_title '' %} | {% block app_title 'Green Kilty' %}{% endblock %}</title>
+    {% block stylesheets '' %}
+    {% block final_stylesheets '' %}
+    {% block head_javascripts '' %}
+    <meta name="description" content="{% block meta_description %}Description du site, uniquer sur chaque page.{% endblock %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="skin-default fixed-layout">
+    {% block body '' %}
+    {% block javascripts '' %}
+    {% block final_javascripts '' %}
+</body>
 </html>
