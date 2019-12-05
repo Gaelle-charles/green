@@ -8,7 +8,9 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 
 
@@ -21,7 +23,8 @@ class KiltyConnexionController extends AbstractController
 
 
     /**
-     * @Route("/boutique", name="shop_home", methods={"GET"})
+     * @Route("/register", name="shop_register", methods={"GET"})
+     * @return Response
      */
     public function register()
     {
