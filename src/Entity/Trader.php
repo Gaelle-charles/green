@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TraderRepository")
@@ -18,21 +19,26 @@ class Trader
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez oublier votre prenom")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez oublier votre nom")
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez oublier votre email")
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez oublier votre mot de passe")
+     *
      */
     private $password;
 

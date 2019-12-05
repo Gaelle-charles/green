@@ -27,11 +27,11 @@ class UserController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function register(Request $request)
+    public function register(Request $request, $encoder)
     {
 
         $trader = new Trader();
-        $trader->setRoles(['ROLE_MEMBRE'])->setRegistrationDate(new \DateTime());
+        $trader->setRoles(['ROLE_CLIENT'])->setRegistrationDate(new \DateTime());
 
         $form = $this->createFormBuilder($trader)
             ->add('name', TextType::class, [
@@ -68,15 +68,19 @@ class UserController extends AbstractController
 
         $form->handleRequest($request);
 
+        # 3. Vérification de la soumission
         if ($form->isSubmitted() && $form->isValid()) {
 
-            dd($trader); // FIXME a supprimer
+            # 4. Encodage du Mot De Passe ( Ignorer cette étape )
+            $trader->setPassword(
+                $encoder->encodePassword($trader, $trader->getPassword())
+            );
+
+            return $this->render('shop/user/register.html.twig', [
+                'form' => $form->createView()
+            ]);
 
         }
-
-        return $this->render('shop/user/register.html.twig', [
-            'form' => $form->createView()
-        ]);
 
     }
 

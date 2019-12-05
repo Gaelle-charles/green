@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
@@ -18,31 +19,37 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez oublier le titre.")
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
     private $alias;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez oublier le contenu.")
      */
     private $text;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="vous avez oublier votre image, c'est obligatoire !")
      */
     private $image;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="vous avez oublier le prix")
      */
     private $price;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="vous avez oublier la quantité.")
      */
     private $quantity;
 
