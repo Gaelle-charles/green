@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/KiltyShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KiltyShopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Trader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Trader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_footer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/_search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_search.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/_slider.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_slider.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop_layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop_layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TraderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/TraderRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,6 +190,7 @@
       <workItem from="1575552015439" duration="2818000" />
       <workItem from="1575567233314" duration="328000" />
       <workItem from="1575567617395" duration="9516000" />
+      <workItem from="1575635364407" duration="3237000" />
     </task>
     <servers />
   </component>

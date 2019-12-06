@@ -21,6 +21,7 @@ class Category
      */
     private $name;
 
+
     /**
      * @ORM\Column(type="string", length=255)
      */

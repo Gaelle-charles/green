@@ -3,7 +3,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Trader;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 
 /**
@@ -25,16 +26,18 @@ class UserController extends AbstractController
     /**
      * @Route("/register", name="shop_register", methods={"GET|POST"})
      * @param Request $request
+     * @param UserPasswordEncoderInterface $encoder
      * @return Response
+     * @throws \Exception
      */
-    public function register(Request $request, $encoder)
+    public function register(Request $request, UserPasswordEncoderInterface $encoder)
     {
 
-        $trader = new Trader();
-        $trader->setRoles(['ROLE_CLIENT'])->setRegistrationDate(new \DateTime());
+        $user = new User();
+        $user->setRoles(['ROLE_USER'])->setRegistrationDate(new \DateTime());
 
-        $form = $this->createFormBuilder($trader)
-            ->add('name', TextType::class, [
+        $form = $this->createFormBuilder($user)
+            ->add('firstname', TextType::class, [
                 'label' => false,
                 'attr' => [
                     'placeholder' => 'Saisissez votre prénom'
@@ -71,17 +74,31 @@ class UserController extends AbstractController
         # 3. Vérification de la soumission
         if ($form->isSubmitted() && $form->isValid()) {
 
-            # 4. Encodage du Mot De Passe ( Ignorer cette étape )
-            $trader->setPassword(
-                $encoder->encodePassword($trader, $trader->getPassword())
-            );
 
-            return $this->render('shop/user/register.html.twig', [
-                'form' => $form->createView()
-            ]);
+            $user->setPassword(
+                $encoder->encodePassword($user, $user->getPassword())
+            );
+                  # 5. Sauvegarde en BDD
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+
+            # 6.Notification flash
+            $this->addFlash('notice',
+                'Félicitation vous êtes inscris !');
+
+            # 7. Redirection sur la page de Connexion
+            return $this->redirectToRoute('shop_register');
 
         }
 
+
+        #Transmission du Formulaire a la vue
+        return $this->render('shop/user/register.html.twig', [
+            'form' => $form->createView()
+        ]);
+
     }
 
-}
+    }
