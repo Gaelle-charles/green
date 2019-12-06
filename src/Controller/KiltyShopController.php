@@ -3,10 +3,8 @@
 
 namespace App\Controller;
 
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-
 /**
  * Class KiltyShopController
  * @package App\Controller
@@ -20,6 +18,7 @@ class KiltyShopController extends AbstractController
      */
     public function home()
     {
+
         return $this->render('shop/home.html.twig');
     }
 }
