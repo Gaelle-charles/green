@@ -1,13 +1,11 @@
-{% extends "shop_layout.html.twig" %}
+{% extends "indexLayout.html.twig" %}
 
 {% block page_title %}
     Accueil
 {% endblock %}
 
 {% block content %}
-
-    <!-- Carousel
-    ================================================== -->
+    <!-- Carousel ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -17,28 +15,127 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <a href="#"> <img class="first-slide" src="{{ asset('images/ba.jpg') }}" alt="First slide"></a>
-
+                <a href="#"> <img class="first-slide" src="{{ asset('images/ET SI ON MANGEAIT LOCAL.png') }}" alt="First slide"></a>
             </div>
             <div class="item">
-                <a href="#"> <img class="second-slide " src="{{ asset('images/ba1.jpg') }}" alt="Second slide"></a>
-
+                <a href="#"> <img class="second-slide" src="{{ asset('images/ET SI ON MANGEAIT LOCAL (1).png') }}" alt="Second slide"></a>
             </div>
             <div class="item">
-                <a href="#"><img class="third-slide " src="{{ asset('images/ba2.jpg') }}" alt="Third slide"></a>
-
+                <a href="#"><img class="third-slide" src="{{ asset('images/ET SI ON MANGEAIT LOCAL (2).png') }}" alt="Third slide"></a>
             </div>
         </div>
+    </div>
+    <!-- /.carousel -->
 
-    </div><!-- /.carousel -->
+    <!-- TEXT 1 : ACCUEIL -->
+    <div class="about" id="about">
+        <div class="container">
+            <h2 class="heading">Qu'est-ce que Green Kilty ?</h2>
+            <div class="col-md-7 aboutleft">
+                <h3>We provide seasonal & unseasonal fruits with quality</h3>
+                <h3>We grow best organic food</h3>
+                <p>Sed hendrerit vel urna in faucibus. Praesent porta, enim a viverra tincidunt, tortorin urna porta ligula,
+                    venenatis vestibulum sapien augue vitae ligula. Phasellus vel augue sem. Nulla auctor elit augue, eu volutpat
+                    risus tincidunt ullamcorper. Su spendisse id ante molestie libero placerat condimentum. Maecenas in conse
+                    quatlibero. Maecenas nisi sapien, porttitor et pulvinar non </p>
+                <div class="more">
+                    <a href="#" class="hvr-shutter-in-vertical" data-toggle="modal" data-target="#myModal">En savoir plus <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-md-5 aboutright">
+                <div class="sreen-gallery-cursual">
+                    <div id="owl-demo" class="owl-carousel">
+                        <div class="item-owl">
+                            <div class="test-review">
+                                <div class="img-agile">
+                                    <img src="images/apple.png" class="img-responsive" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-owl">
+                            <div class="test-review">
+                                <div class="img-agile">
+                                    <img src="images/banana.png" class="img-responsive" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-owl">
+                            <div class="test-review">
+                                <div class="img-agile">
+                                    <img src="images/lemon.png" class="img-responsive" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- FIN // TEXT 1 : ACCUEIL  -->
+
+    <!--team-->
+    <div class="team" id="team">
+        <div class="w3agile-spldishes">
+            <div class="container">
+                <h2 class="heading text-center">Nos commerçants vert</h2>
+                <div class="spldishes-agileinfo">
+                    <div class="spldishes-grids">
+                        <div class="col-md-3 item g1">
+                            <img src="images/t1.jpg" title="Our Farmers" alt=""/>
+                            <div class="agile-dish-caption">
+                            </div>
+                            <h4>Jack Alisa</h4>
+                            <p>Agriculture</p>
+                        </div>
+                        <div class="col-md-3 item g1">
+                            <img src="images/t2.jpg" title="Our Farmers" alt=""/>
+                            <div class="agile-dish-caption">
+                            </div>
+                            <h4>Charley Lucas</h4>
+                            <p>Commerçant produit équitable</p>
+                        </div>
+                        <div class="col-md-3 item g1">
+                            <img src="images/t3.jpg" title="Our Farmers" alt=""/>
+                            <div class="agile-dish-caption">
+                            </div>
+                            <h4>Randy Donald</h4>
+                            <p>Eleveur</p>
+                        </div>
+                        <div class="col-md-3 item g1">
+                            <img src="images/t4.jpg" title="Our Farmers" alt=""/>
+                            <div class="agile-dish-caption">
+                            </div>
+                            <h4>Johnson Carle</h4>
+                            <p>Farmer</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--//team-->
 
 {% endblock %}
 
 {% block slider %}{% endblock %}
 
-{% block final_stylesheets %}{% endblock %}
+{% block final_stylesheets %}
+    <!-- default css files -->
+    <link rel="stylesheet" href="css/home/bootstrap.css" type="text/css" media="all">
+    <link href="css/home/JiSlider.css" rel="stylesheet"> <!-- banner slider css file -->
+    <link href="../simpleLightbox.css" rel="stylesheet" type="text/css" /><!-- gallery css file -->
+    <link rel="stylesheet" href="../font-awesome.min.css" /><!-- Font awesome css file -->
+    <link rel="stylesheet" href="../style.css" type="text/css" media="all">
+    <!-- default css files -->
+{% endblock %}
 
-{% block final_javascripts %}{% endblock %}
+{% block final_javascripts %}
+
+
+{% endblock %}
 
 
 

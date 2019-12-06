@@ -2,9 +2,10 @@
 
 {% block stylesheets %}
     <link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet"  /><!-- Font awesome css file -->
     <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="{{ asset('css/jstarbox.css') }}" type="text/css" media="screen" />
+    <link href="{{ asset('css/jstarbox.css') }}" rel="stylesheet" type="text/css" media="screen" />
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 {% endblock %}
@@ -17,19 +18,28 @@
 {% block body %}
     <div class="header">
         <div class="container">
-
             <div class="logo">
-                <h1 ><a href="{{ path('shop_home') }}">Green Kilty<span>Votre local shop !</span></a></h1>
+                <img src="{{ asset('images/Logo.png') }}" alt="">
+{#                <h1 ><a href="{{ path('shop_home') }}">Green Kilty<span>Votre local shop !</span></a></h1>#}
             </div>
 
             {% include 'components/_top-header.html.twig' %}
             {% include 'components/_nav.html.twig' %}
 
+{#   A repositionner dans le content         {% block title %}#}
+{#                <div class="spec ">#}
+{#                    #}{#<h3>{{category.name}}</h3>#}
+{#                    <div class="ser-t">#}
+{#                        <b></b>#}
+{#                        <span><i></i></span>#}
+{#                        <b class="line"></b>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endblock %}#}
         </div>
     </div>
 
     {% block slider '' %}
-
     <div class="content-top ">
         <div class="container ">
             {% block content '' %}
