@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Controller/KiltyFrontController.php" afterDir="false" />
@@ -75,6 +76,16 @@
       <change beforePath="$PROJECT_DIR$/public/js/vendor/jquery.gmap3.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/formUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/formUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191206155119.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_top-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_top-header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formUser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formUser.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/indexLayout2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indexLayout2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/user/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/register.html.twig" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
