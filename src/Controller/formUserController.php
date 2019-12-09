@@ -9,6 +9,8 @@ use App\Entity\Category;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -41,7 +43,7 @@ class formUserController extends AbstractController
             # Titre de l'article
             ->add('title', TextType::class, [
                 'required' => true,
-                'label' => false,
+                'label' => 'Titre',
                 'attr' =>[
                     'placeholder' => 'Titre de l\'Article ...'
                 ]
@@ -50,19 +52,29 @@ class formUserController extends AbstractController
             # Catégorie
             ->add('category', EntityType::class, [
                 'class' => Category::class,
-                'label' =>false,
-                'choise_label' => 'name'
+                'label' => 'Catégorie',
+                'choice_label' => 'name'
             ])
 
             # Contenu
             ->add('content', TextareaType::class, [
-                'required' => false,
-                'label' =>false
+                'label' =>'Descrption l\'article'
+            ])
+
+            # Price
+            ->add('price', MoneyType::class, [
+                'currency' => 'EUR',
+                'label' => 'Prix'
+            ])
+
+            # Quantity
+            ->add('quantity', NumberType::class, [
+                'label' =>'Quantité vendue'
             ])
 
             # Image
             ->add('image', FileType::class,[
-                'label' => false,
+                'label' => 'Photos (fortement conseillée)',
                 'attr' =>[
                     'class' => 'dropify'
                 ]
@@ -70,7 +82,10 @@ class formUserController extends AbstractController
 
             # Bouton Envoyer
             ->add('submit', SubmitType::class, [
-                'label' => 'Mettre en ligne mon article'
+                'label' => 'Publier mon article',
+                'attr' => [
+                    'class' => 'btn btn-block btn-info'
+                ]
             ])
 
             # Récupére les données dans le Formulaire
@@ -87,7 +102,7 @@ class formUserController extends AbstractController
             $imageFile = $form['image']->getData();
             if ($imageFile){
 
-                # --------------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
+                # --------------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
 
                 $newFilename = $this->slugify($article->getTitle()). '-' . uniqid(). '.'. $imageFile->guessExtension();
                 try {
@@ -95,7 +110,7 @@ class formUserController extends AbstractController
                         $this->getParameter('articles_directory'),
                         $newFilename
                     );
-                } catch (FileException $exception){
+                } catch (FileException $e){
 
                 }
                 $article->setImage($newFilename);
@@ -115,8 +130,7 @@ class formUserController extends AbstractController
             $this ->addFlash('notice',
                 'Votre article est désormais en ligne !');
 
-
-            # -------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
+            # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
 
             # Redirection
             return $this->redirectToRoute('default_article', [
@@ -126,11 +140,10 @@ class formUserController extends AbstractController
             ]);
         }
 
-
-        # -------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
+        # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
 
         # Transmission à la Vue
-        return $this->render('user/form.hmtl.twig',[
+        return $this->render('shop/user/formUser.html.twig',[
             'form' => $form ->createView()
         ]);
     }

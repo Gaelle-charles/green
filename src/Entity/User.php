@@ -41,7 +41,7 @@ class User
     /**
      * @ORM\Column(type="datetime")
      */
-    private $resgistrationDate;
+    private $registrationDate;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
@@ -116,14 +116,14 @@ class User
         return $this;
     }
 
-    public function getResgistrationDate(): ?\DateTimeInterface
+    public function getRegistrationDate(): ?\DateTimeInterface
     {
-        return $this->resgistrationDate;
+        return $this->registrationDate;
     }
 
-    public function setResgistrationDate(\DateTimeInterface $resgistrationDate): self
+    public function setRegistrationDate(\DateTimeInterface $registrationDate): self
     {
-        $this->resgistrationDate = $resgistrationDate;
+        $this->registrationDate = $registrationDate;
 
         return $this;
     }

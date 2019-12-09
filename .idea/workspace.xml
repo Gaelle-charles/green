@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/shop/general/list.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/formUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/formUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Trader.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191206155119.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TraderRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/_top-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_top-header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formUser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/formUser.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/indexLayout2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indexLayout2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/user/formUser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/formUser.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shop/user/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shop/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/register.html.twig" afterDir="false" />
     </list>
@@ -211,7 +207,7 @@
       <workItem from="1575484926707" duration="2256000" />
       <workItem from="1575552015439" duration="2818000" />
       <workItem from="1575637036963" duration="5839000" />
-      <workItem from="1575895277688" duration="8102000" />
+      <workItem from="1575895277688" duration="17737000" />
     </task>
     <servers />
   </component>
@@ -236,5 +232,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1114" y="331" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575643560202" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1575914967588">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1575914967588" />
   </component>
 </project>

@@ -7,7 +7,7 @@
 {% block content %}
         <div class="container">
             <div class="row">
-                <div class="col-4 mx-auto">
+                <div class="col-md-6 col-md-offset-3">
                     <form method="post">
                         {% if error %}
                             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -36,7 +36,7 @@
                             </label>
                         </div>
                         <br>
-                        <button class="btn btn-lg btn btn-dark" type="submit">
+                        <button class="btn btn-lg btn btn-info" type="submit">
                             Se connecter
                         </button>
                     </form>

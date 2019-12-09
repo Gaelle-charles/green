@@ -39,25 +39,25 @@ class UserController extends AbstractController
 
         $form = $this->createFormBuilder($user)
             ->add('firstname', TextType::class, [
-                'label' => false,
+                'label' => 'Prénom',
                 'attr' => [
                     'placeholder' => 'Saisissez votre prénom'
                 ]
             ])
             ->add('lastname', TextType::class, [
-                'label' => false,
+                'label' => 'Nom',
                 'attr' => [
                     'placeholder' => 'Saisissez votre nom'
                 ]
             ])
             ->add('email', EmailType::class, [
-                'label' => false,
+                'label' => 'Email',
                 'attr' => [
                     'placeholder' => 'Saisissez votre email'
                 ]
             ])
             ->add('password', PasswordType::class, [
-                'label' => false,
+                'label' => 'Mot de passe',
                 'attr' => [
                     'placeholder' => 'Saisissez votre mot de passe'
                 ]
@@ -65,7 +65,7 @@ class UserController extends AbstractController
             ->add('submit', SubmitType::class, [
                 'label' => "Je m'inscris !",
                 'attr' => [
-                    'class' => 'btn btn-block btn-dark'
+                    'class' => 'btn btn-block btn-info'
                 ]
             ])
             ->getForm();
