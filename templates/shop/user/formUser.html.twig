@@ -4,8 +4,8 @@
     <h1 class="display-4 my-4 text-center">Ajouter un article</h1>
 {% endblock %}
 
-{% block stylesheets %}
-    {{ parent() }}
+{% block final_stylesheets %}
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
           integrity="sha256-AWdeVMUYtwLH09F6ZHxNgvJI37p+te8hJuSMo44NVm0=" crossorigin="anonymous" />
     <style>
@@ -28,8 +28,7 @@
 {% endblock %}
 
 
-{% block scripts %}
-    {{ parent() }}
+{% block final_javascripts %}
     <!-------------------------------CKEDITOR------------------------------->
     <script src="https://cdn.ckeditor.com/ckeditor5/15.0.0/classic/ckeditor.js"></script>
     <script>
