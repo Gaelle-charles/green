@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/CardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shop/Panier.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/formUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/formUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Trader.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191206155119.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TraderRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/_top-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_top-header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formUser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/formUser.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/user/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +163,8 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/vitrine/index.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -186,15 +178,15 @@
       <recent name="C:\xampp\htdocs\green\public\css" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
