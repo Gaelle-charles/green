@@ -107,7 +107,7 @@ class formUserController extends AbstractController
                 $newFilename = $this->slugify($article->getTitle()). '-' . uniqid(). '.'. $imageFile->guessExtension();
                 try {
                     $imageFile->move(
-                        $this->getParameter('articles_directory'),
+                        $this->getParameter('products_images'),
                         $newFilename
                     );
                 } catch (FileException $e){
