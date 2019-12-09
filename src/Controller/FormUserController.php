@@ -20,7 +20,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class formUserController extends AbstractController
+class FormUserController extends AbstractController
 {
     use HelperTrait;
 
@@ -58,7 +58,8 @@ class formUserController extends AbstractController
 
             # Contenu
             ->add('content', TextareaType::class, [
-                'label' =>'Descrption l\'article'
+                'required' => false,
+                'label' =>'Description l\'article'
             ])
 
             # Price
@@ -131,9 +132,8 @@ class formUserController extends AbstractController
                 'Votre article est désormais en ligne !');
 
             # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
-
             # Redirection
-            return $this->redirectToRoute('default_article', [
+            return $this->redirectToRoute('shop_home', [
                 'category' => $article-> getCategory() -> getAlias(),
                 'alias' => $article -> getAlias(),
                 'id' => $article-> getId()

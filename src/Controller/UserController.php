@@ -90,10 +90,8 @@ class UserController extends AbstractController
                 'Félicitation vous êtes inscris !');
 
             # 7. Redirection sur la page de Connexion
-            return $this->redirectToRoute('shop_register');
-
+            return $this->redirectToRoute('shop_home');
         }
-
 
         #Transmission du Formulaire a la vue
         return $this->render('shop/user/register.html.twig', [
