@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/formUser.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/indexLayout2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/green.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/green.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/KiltyFrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KiltyFrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/formUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/formUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Trader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191206155119.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/TraderRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/_top-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_top-header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front_layout.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indexLayout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formUser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/formUser.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/user/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +181,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\green\templates\shop\user" />
       <recent name="C:\xampp\htdocs\green\public\css\home" />
       <recent name="C:\xampp\htdocs\green\public\css" />
     </key>
@@ -206,6 +211,7 @@
       <workItem from="1575484926707" duration="2256000" />
       <workItem from="1575552015439" duration="2818000" />
       <workItem from="1575637036963" duration="5839000" />
+      <workItem from="1575895277688" duration="8102000" />
     </task>
     <servers />
   </component>

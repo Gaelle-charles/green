@@ -4,6 +4,8 @@
 namespace App\Controller;
 
 
+use App\Entity\Article;
+use App\Entity\Category;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -18,6 +20,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class formUserController extends AbstractController
 {
+    use HelperTrait;
+
     /**
      * Formulaire pour ajouter des articles
      * @Route("/ajouter-un-article", name="article_add")
@@ -44,20 +48,20 @@ class formUserController extends AbstractController
             ])
 
             # Catégorie
-            ->add('category', EntityType::class,[
+            ->add('category', EntityType::class, [
                 'class' => Category::class,
                 'label' =>false,
                 'choise_label' => 'name'
             ])
 
             # Contenu
-            ->add('content', TextareaType::class,[
+            ->add('content', TextareaType::class, [
                 'required' => false,
-                'label' =>false,
+                'label' =>false
             ])
 
             # Image
-            ->add('image', FileType::class, [
+            ->add('image', FileType::class,[
                 'label' => false,
                 'attr' =>[
                     'class' => 'dropify'
@@ -65,13 +69,14 @@ class formUserController extends AbstractController
             ])
 
             # Bouton Envoyer
-            ->add('submit', SubmitType::class,[
+            ->add('submit', SubmitType::class, [
                 'label' => 'Mettre en ligne mon article'
             ])
 
             # Récupére les données dans le Formulaire
             ->getForm();
 
+        # Gestion des données reçues par symfony
         $form->handleRequest($request);
 
         # Soumission du form et validation
@@ -87,7 +92,7 @@ class formUserController extends AbstractController
                 $newFilename = $this->slugify($article->getTitle()). '-' . uniqid(). '.'. $imageFile->guessExtension();
                 try {
                     $imageFile->move(
-                        $this->getParameter(''),
+                        $this->getParameter('articles_directory'),
                         $newFilename
                     );
                 } catch (FileException $exception){
@@ -97,7 +102,6 @@ class formUserController extends AbstractController
 
             }
             // Fin de upload de l'image
-
 
             # Génération de l'alias de l'article
             $article->setAlias( $this->slugify( $article->getTitle()));
@@ -115,8 +119,8 @@ class formUserController extends AbstractController
             # -------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
 
             # Redirection
-            return $this->redirectToRoute('', [
-                'category' => $article-> getCatgeory() -> getAlias(),
+            return $this->redirectToRoute('default_article', [
+                'category' => $article-> getCategory() -> getAlias(),
                 'alias' => $article -> getAlias(),
                 'id' => $article-> getId()
             ]);
@@ -126,7 +130,7 @@ class formUserController extends AbstractController
         # -------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
 
         # Transmission à la Vue
-        return $this->render('',[
+        return $this->render('user/form.hmtl.twig',[
             'form' => $form ->createView()
         ]);
     }

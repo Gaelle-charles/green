@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
@@ -19,44 +18,48 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="vous avez oublier le titre.")
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
-     *
      */
     private $alias;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="vous avez oublier le contenu.")
      */
-    private $text;
+    private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="vous avez oublier votre image, c'est obligatoire !")
      */
     private $image;
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="vous avez oublier le prix")
      */
     private $price;
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="vous avez oublier la quantité.")
      */
     private $quantity;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $created_date;
+    private $createdDate;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="articles")
+     */
+    private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
+     */
+    private $category;
 
     public function getId(): ?int
     {
@@ -87,14 +90,14 @@ class Article
         return $this;
     }
 
-    public function getText(): ?string
+    public function getContent(): ?string
     {
-        return $this->text;
+        return $this->content;
     }
 
-    public function setText(string $text): self
+    public function setContent(string $content): self
     {
-        $this->text = $text;
+        $this->content = $content;
 
         return $this;
     }
@@ -137,12 +140,36 @@ class Article
 
     public function getCreatedDate(): ?\DateTimeInterface
     {
-        return $this->created_date;
+        return $this->createdDate;
     }
 
-    public function setCreatedDate(\DateTimeInterface $created_date): self
+    public function setCreatedDate(\DateTimeInterface $createdDate): self
     {
-        $this->created_date = $created_date;
+        $this->createdDate = $createdDate;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
