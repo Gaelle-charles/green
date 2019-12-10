@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use function Sodium\add;
 
 
 /**
@@ -23,7 +24,8 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
  */
 class UserController extends AbstractController
 {
-
+    const ROLE_USER = 'ROLE_USER';
+    const ROLE_ADMIN = 'ROLE_ADMIN';
 
 
     /**
@@ -40,6 +42,16 @@ class UserController extends AbstractController
         $user->setRoles(['ROLE_USER'])->setRegistrationDate(new \DateTime());
 
         $form = $this->createFormBuilder($user)
+
+            ->add('roles', ChoiceType::class, [
+                'choices' => [
+                    'Visiteur' => self::ROLE_USER,
+                    'Commerçant' => self::ROLE_ADMIN,
+                ],
+                'expanded' => true,
+                'multiple' => true
+            ])
+
             ->add('firstname', TextType::class, [
                 'label' => 'Prénom',
                 'attr' => [
@@ -51,12 +63,6 @@ class UserController extends AbstractController
                 'attr' => [
                     'placeholder' => 'Saisissez votre nom'
                 ]
-            ])
-            ->add('roles', ChoiceType::class, [
-                    'choices'  => $user,
-                    'expanded' => true,
-                    'multiple' => true
-
             ])
 
             ->add('email', EmailType::class, [

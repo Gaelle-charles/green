@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/newstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ListArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FormUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FormUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/indexLayout2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indexLayout2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/general/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/general/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_footer.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
