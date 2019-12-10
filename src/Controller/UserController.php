@@ -91,7 +91,6 @@ class UserController extends AbstractController
         # 3. Vérification de la soumission
         if ($form->isSubmitted() && $form->isValid()) {
 
-
             $user->setPassword(
                 $encoder->encodePassword($user, $user->getPassword())
             );
@@ -106,7 +105,7 @@ class UserController extends AbstractController
                 'Félicitation vous êtes inscris !');
 
             # 7. Redirection sur la page de Connexion
-            return $this->redirectToRoute('shop_home');
+            return $this->redirectToRoute('shop_login');
         }
 
         #Transmission du Formulaire a la vue
