@@ -1,4 +1,4 @@
-{% extends "shop_layout.html.twig" %}
+{% extends "indexLayout2.html.twig" %}
 
 {% block page_title %}
     Connexion
@@ -7,7 +7,7 @@
 {% block content %}
         <div class="container">
             <div class="row">
-                <div class="col-4 mx-auto">
+                <div class="col-md-6 col-md-offset-3">
                     <form method="post">
                         {% if error %}
                             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -32,11 +32,11 @@
                         >
                         <div class="checkbox mb-3">
                             <label>
-                                <input type="checkbox" name="_remember_me"> Remember me
+                                <input type="checkbox" name="_remember_me"> Se souvenir de moi
                             </label>
                         </div>
                         <br>
-                        <button class="btn btn-lg btn btn-dark" type="submit">
+                        <button class="btn btn-lg btn btn-info" type="submit">
                             Se connecter
                         </button>
                     </form>

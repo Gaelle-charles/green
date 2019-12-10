@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -16,12 +17,15 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
+
 /**
  * Class KiltyConnexionController
  * @package App\Controller
  */
 class UserController extends AbstractController
 {
+    const ROLE_USER = 'ROLE_USER';
+    const ROLE_CLIENT = 'ROLE_CLIENT';
 
 
     /**
@@ -30,6 +34,7 @@ class UserController extends AbstractController
      * @param UserPasswordEncoderInterface $encoder
      * @return Response
      * @throws \Exception
+     *
      */
     public function register(Request $request, UserPasswordEncoderInterface $encoder)
     {
@@ -38,26 +43,37 @@ class UserController extends AbstractController
         $user->setRoles(['ROLE_USER'])->setRegistrationDate(new \DateTime());
 
         $form = $this->createFormBuilder($user)
+
+            ->add('roles', ChoiceType::class, [
+                'choices' => [
+                    'Visiteur' => self::ROLE_CLIENT,
+                    'Commerçant' => self::ROLE_USER,
+                ],
+                'expanded' => true,
+                'multiple' => false
+            ])
+
             ->add('firstname', TextType::class, [
-                'label' => false,
+                'label' => 'Prénom',
                 'attr' => [
                     'placeholder' => 'Saisissez votre prénom'
                 ]
             ])
             ->add('lastname', TextType::class, [
-                'label' => false,
+                'label' => 'Nom',
                 'attr' => [
                     'placeholder' => 'Saisissez votre nom'
                 ]
             ])
+
             ->add('email', EmailType::class, [
-                'label' => false,
+                'label' => 'Email',
                 'attr' => [
                     'placeholder' => 'Saisissez votre email'
                 ]
             ])
             ->add('password', PasswordType::class, [
-                'label' => false,
+                'label' => 'Mot de passe',
                 'attr' => [
                     'placeholder' => 'Saisissez votre mot de passe'
                 ]
@@ -65,7 +81,7 @@ class UserController extends AbstractController
             ->add('submit', SubmitType::class, [
                 'label' => "Je m'inscris !",
                 'attr' => [
-                    'class' => 'btn btn-block btn-dark'
+                    'class' => 'btn btn-block btn-info'
                 ]
             ])
             ->getForm();
@@ -74,7 +90,6 @@ class UserController extends AbstractController
 
         # 3. Vérification de la soumission
         if ($form->isSubmitted() && $form->isValid()) {
-
 
             $user->setPassword(
                 $encoder->encodePassword($user, $user->getPassword())
@@ -90,10 +105,8 @@ class UserController extends AbstractController
                 'Félicitation vous êtes inscris !');
 
             # 7. Redirection sur la page de Connexion
-            return $this->redirectToRoute('shop_register');
-
+            return $this->redirectToRoute('shop_login');
         }
-
 
         #Transmission du Formulaire a la vue
         return $this->render('shop/user/register.html.twig', [
