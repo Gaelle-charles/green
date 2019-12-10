@@ -23,7 +23,44 @@
 </head>
 
 <body class="skin-default fixed-layout">
-    {% block body '' %}
+    {% block body %}
+        <main class="container">
+            <div class="row">
+                <div class="col">
+                    {{ render(controller('App\\Controller\\DefaultController::menu')) }}
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <div class="container my-4">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="alert alert-info text-center">
+                                        Bonjour {{ app.user.firstname }} -
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                            <em>Administrateur</em>
+                                        {% elseif is_granted('ROLE_USER') %}
+                                            <em>Utilisateur</em>
+                                        {% else %}
+                                            <em>Abonné(e)</em>
+                                        {% endif %}
+
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                            | <a href="{{ path('article_add') }}">Rédiger un Article</a>
+                                        {% endif %}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+
+                    {% block content %}{% endblock %}
+                    {% include 'components/_footer.html.twig' %}
+
+                </div>
+            </div>
+        </main>
+
+    {% endblock %}
     {% block javascripts '' %}
     {% block final_javascripts '' %}
 </body>

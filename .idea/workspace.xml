@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/CardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shop/Panier.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/AppUserAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/green.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/green.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/_top-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_top-header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/user/formUser.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/user/formUser.html.twig" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +168,10 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/vitrine/index.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -173,6 +181,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wf3-gpe\formation-AJAX\green\src\Security" />
+      <recent name="C:\xampp\htdocs\wf3-gpe\formation-AJAX\green\src\Repository" />
       <recent name="C:\xampp\htdocs\green\templates\shop\user" />
       <recent name="C:\xampp\htdocs\green\public\css\home" />
       <recent name="C:\xampp\htdocs\green\public\css" />
@@ -204,6 +214,7 @@
       <workItem from="1575552015439" duration="2818000" />
       <workItem from="1575637036963" duration="5839000" />
       <workItem from="1575895277688" duration="8102000" />
+      <workItem from="1575998620369" duration="645000" />
     </task>
     <servers />
   </component>
