@@ -1,0 +1,76 @@
+{% extends "indexLayout2.html.twig" %}
+
+{% block page_title %}
+    Panier
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mx-auto">
+                {% block body %}
+                    <div class="bg-light p-3">
+                        <h1 class="text-center ">Votre panier </h1>
+                    </div>
+                    {% if items | length > 0 %}
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Prix</th>
+                                <th>Quantité</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for item in items %}
+                                <tr>
+                                    <td>{{ item.product.title }}</td>
+                                    <td>{{ item.product.price }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td>{{ item.product.price * item.quantity }}</td>
+                                    <td>
+                                        <a href="{{ path('panier_remove', {'id': item.product.id}) }}" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-right">Total :</td>
+                                <td>{{ total }}</td>
+                                <td></td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    {% else %}
+                        <h1 class="text-center jumbotron">Surprise, c'est vide !</h1>
+                    {% endif %}
+
+
+                {% endblock %}
+
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+{% endblock %}
+
+{% block slider %}{% endblock %}
+
+{% block final_stylesheets %}{% endblock %}
+
+{% block final_javascripts %}{% endblock %}
+
+
+

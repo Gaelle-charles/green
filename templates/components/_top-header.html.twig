@@ -1,10 +1,18 @@
 <div class="head-t">
     <ul class="card">
         <li><a href="{{ path('shop_home') }}" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
-        <li><a href="{{ path('shop_login') }}" ><i class="fa fa-user" aria-hidden="true"></i>Connexion</a></li>
-        <li><a href="{{ path('shop_register') }}" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Inscription</a></li>
         <li><a href="{{ path('shop_home') }}" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Historique</a></li>
-        <li><a href="{{ path('shop_home') }}" ><i class="fa fa-ship" aria-hidden="true"></i>Mon panier</a></li>
+        <li><a href="{{ path('shop_panier') }}" ><i class="fa fa-ship" aria-hidden="true"></i>Mon panier</a></li>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <li>
+            <a href="{{ path('app_logout') }}"><i class="fa fa-user" aria-hidden="true">
+            </i>Déconnexion</a>
+        </li>
+        {% else %}
+        <li><a href="{{ path('shop_login') }}"><i class="fa fa-user" aria-hidden="true"></i>Connexion</a></li>
+        <li><a href="{{ path('shop_register') }}" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Inscription</a></li>
+
+        {% endif %}
     </ul>
 </div>
 

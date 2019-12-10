@@ -105,8 +105,7 @@ class UserController extends AbstractController
                 'Félicitation vous êtes inscris !');
 
             # 7. Redirection sur la page de Connexion
-            return $this->redirectToRoute('shop_login');
-        }
+
 
         #Transmission du Formulaire a la vue
         return $this->render('shop/user/register.html.twig', [
@@ -132,18 +131,12 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/deconnexion.html", name="app_logout")
+     * @Route("/shop_deconnexion", name="app_logout")
      * @throws \Exception
      */
     public function logout()
     {
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
-
-
-
-
-
-
 
     }
