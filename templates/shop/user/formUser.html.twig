@@ -1,20 +1,25 @@
 {% extends "indexLayout2.html.twig" %}
 
 {% block title %}
-    <h1 class="my-4 text-center">Mon Compte</h1>
+    Ajouter un article
 {% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% block final_stylesheets %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css"
+          integrity="sha256-AWdeVMUYtwLH09F6ZHxNgvJI37p+te8hJuSMo44NVm0=" crossorigin="anonymous" />
+    <style>
+        .custom-file-label { display: none; }
+    </style>
+
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-8 mx-auto">
+            <div class="col-md-8 col-md-offset-2">
                 <article class="box-grey-dark">
-                    <h3>Mon article</h3>
+                    <h3 class="my-4 mx-auto text-center">Ajouter un article</h3>
                    {{ form(form) }}
                 </article>
             </div>
@@ -22,7 +27,27 @@
     </div>
 {% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+{% block final_javascripts %}
+    <!-------------------------------CKEDITOR------------------------------->
+    <script src="https://cdn.ckeditor.com/ckeditor5/15.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create(document.querySelector('#form_content'));
+    </script>
+
+    <!--------------------------------DROPIFY----------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"
+            integrity="sha256-SUaao5Q7ifr2twwET0iyXVy0OVnuFJhGVi5E/dqEiLU=" crossorigin="anonymous">
+    </script>
+    <script>
+        $('.dropify').dropify({
+            messages: {
+                default: 'Glissez-d&eacute;posez un fichier ici ou cliquez',
+                replace: 'Glissez-d&eacute;posez un fichier ou cliquez pour remplacer',
+                remove:  'Supprimer',
+                error:   'D&eacute;sol&eacute;, le fichier est trop volumineux'
+            }
+        });
+    </script>
+
 {% endblock %}

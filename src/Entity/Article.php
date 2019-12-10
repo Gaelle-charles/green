@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
@@ -52,14 +54,21 @@ class Article
     private $createdDate;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="articles")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="article")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="article")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+
+    public function __construct()
+    {
+        $this->createdDate = new \DateTime();
+    }
 
     public function getId(): ?int
     {

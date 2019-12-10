@@ -6,9 +6,12 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Entity\Category;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,13 +21,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class formUserController extends AbstractController
+class FormUserController extends AbstractController
 {
     use HelperTrait;
 
     /**
      * Formulaire pour ajouter des articles
      * @Route("/ajouter-un-article", name="article_add")
+     * @Security("is_granted('ROLE_ADMIN')")
      * @param Request $request
      * @return Response
      */
@@ -34,14 +38,15 @@ class formUserController extends AbstractController
 
         # Création de nouvel article
         $article = new Article();
+        $article->setUser($this->getUser());
 
         # Création du formulaire
-        $form =$this->createFormBuilder($article)
+        $form = $this->createFormBuilder($article)
 
             # Titre de l'article
             ->add('title', TextType::class, [
                 'required' => true,
-                'label' => false,
+                'label' => 'Titre',
                 'attr' =>[
                     'placeholder' => 'Titre de l\'Article ...'
                 ]
@@ -50,19 +55,30 @@ class formUserController extends AbstractController
             # Catégorie
             ->add('category', EntityType::class, [
                 'class' => Category::class,
-                'label' =>false,
-                'choise_label' => 'name'
+                'label' => 'Catégorie',
+                'choice_label' => 'name'
             ])
 
             # Contenu
             ->add('content', TextareaType::class, [
                 'required' => false,
-                'label' =>false
+                'label' =>'Description l\'article'
+            ])
+
+            # Price
+            ->add('price', MoneyType::class, [
+                'currency' => 'EUR',
+                'label' => 'Prix'
+            ])
+
+            # Quantity
+            ->add('quantity', NumberType::class, [
+                'label' =>'Quantité vendue'
             ])
 
             # Image
             ->add('image', FileType::class,[
-                'label' => false,
+                'label' => 'Photos (fortement conseillée)',
                 'attr' =>[
                     'class' => 'dropify'
                 ]
@@ -70,7 +86,10 @@ class formUserController extends AbstractController
 
             # Bouton Envoyer
             ->add('submit', SubmitType::class, [
-                'label' => 'Mettre en ligne mon article'
+                'label' => 'Publier mon article',
+                'attr' => [
+                    'class' => 'btn btn-block btn-info'
+                ]
             ])
 
             # Récupére les données dans le Formulaire
@@ -87,15 +106,15 @@ class formUserController extends AbstractController
             $imageFile = $form['image']->getData();
             if ($imageFile){
 
-                # --------------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
+                # --------------------- ❌ NE PAS OUBLIER LA ROUTE ❌ ------------
 
                 $newFilename = $this->slugify($article->getTitle()). '-' . uniqid(). '.'. $imageFile->guessExtension();
                 try {
                     $imageFile->move(
-                        $this->getParameter('articles_directory'),
+                        $this->getParameter('products_images'),
                         $newFilename
                     );
-                } catch (FileException $exception){
+                } catch (FileException $e){
 
                 }
                 $article->setImage($newFilename);
@@ -115,22 +134,19 @@ class formUserController extends AbstractController
             $this ->addFlash('notice',
                 'Votre article est désormais en ligne !');
 
-
-            # -------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
-
+            # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
             # Redirection
-            return $this->redirectToRoute('default_article', [
+            return $this->redirectToRoute('shop_home', [
                 'category' => $article-> getCategory() -> getAlias(),
                 'alias' => $article -> getAlias(),
                 'id' => $article-> getId()
             ]);
         }
 
-
-        # -------------- ❌ NE PAS OUBLIER LE LA ROUTE ❌------------
+        # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
 
         # Transmission à la Vue
-        return $this->render('user/form.hmtl.twig',[
+        return $this->render('shop/user/formUser.html.twig',[
             'form' => $form ->createView()
         ]);
     }
