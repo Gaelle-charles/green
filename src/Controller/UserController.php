@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -22,6 +23,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
  */
 class UserController extends AbstractController
 {
+
 
 
     /**
@@ -50,6 +52,13 @@ class UserController extends AbstractController
                     'placeholder' => 'Saisissez votre nom'
                 ]
             ])
+            ->add('roles', ChoiceType::class, [
+                    'choices'  => $user,
+                    'expanded' => true,
+                    'multiple' => true
+
+            ])
+
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'attr' => [

@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Entity\Category;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -27,6 +28,7 @@ class FormUserController extends AbstractController
     /**
      * Formulaire pour ajouter des articles
      * @Route("/ajouter-un-article", name="article_add")
+     * @Security("is_granted('ROLE_ADMIN')")
      * @param Request $request
      * @return Response
      */
@@ -36,9 +38,10 @@ class FormUserController extends AbstractController
 
         # Création de nouvel article
         $article = new Article();
+        $article->setUser($this->getUser());
 
         # Création du formulaire
-        $form =$this->createFormBuilder($article)
+        $form = $this->createFormBuilder($article)
 
             # Titre de l'article
             ->add('title', TextType::class, [
@@ -103,7 +106,7 @@ class FormUserController extends AbstractController
             $imageFile = $form['image']->getData();
             if ($imageFile){
 
-                # --------------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
+                # --------------------- ❌ NE PAS OUBLIER LA ROUTE ❌ ------------
 
                 $newFilename = $this->slugify($article->getTitle()). '-' . uniqid(). '.'. $imageFile->guessExtension();
                 try {
