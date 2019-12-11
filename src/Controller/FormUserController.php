@@ -28,7 +28,7 @@ class FormUserController extends AbstractController
     /**
      * Formulaire pour ajouter des articles
      * @Route("/ajouter-un-article", name="article_add")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * @Security("is_granted('ROLE_USER')")
      * @param Request $request
      * @return Response
      */

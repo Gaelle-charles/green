@@ -50,7 +50,7 @@ class UserController extends AbstractController
                     'Commerçant' => self::ROLE_USER,
                 ],
                 'expanded' => true,
-                'multiple' => false
+                'multiple' => true
             ])
 
             ->add('firstname', TextType::class, [
@@ -122,14 +122,21 @@ class UserController extends AbstractController
      * @return Response
      */
     public function login( AuthenticationUtils $authenticationUtils ):Response
-    { //
+    {
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('shop/user/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
-    }
+
+        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+
+}
+
+
+
+
+
 
     /**
      * @Route("/deconnexion.html", name="app_logout")
