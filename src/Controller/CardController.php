@@ -27,7 +27,7 @@ class CardController extends AbstractController
             $totalItem=$item['article']->getPrice() * $item['quantity'];
             $total += $totalItem;
         }
-        return $this->render('shop/Panier.html.twig', [
+        return $this->render('shop/general/Panier.html.twig', [
             'items' => $panierWithData,
             'total'=> $total
         ]);

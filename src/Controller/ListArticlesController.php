@@ -13,7 +13,7 @@ class ListArticlesController extends AbstractController
 {
     /**
      * @return Response
-     * @Route("/list")
+     *  @Route("/list", name="shop_list", methods={"GET"})
      */
     public function listArticle ()
     {

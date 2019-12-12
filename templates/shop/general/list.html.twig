@@ -33,6 +33,13 @@
 {#                                            {{ article.user.firstname }} {{ article.user.lastname }}#}
 {#                                        </small>#}
                                     </div>
+                                    <a href="{{ path('panier_add', {'id':article.id}) }}" class="btn btn-success float-right">
+                                        <i class="fas fa-shopping-cart mr-1"></i>
+                                        Ajouter
+                                    </a>
+                                    <aside>
+                                        {{article.price}}
+                                    </aside>
                                 </div>
                             </div> <!-- Fin card -->
                         </div>

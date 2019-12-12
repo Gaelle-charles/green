@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/CardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shop/Panier.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FormUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FormUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191209192704.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191209194950.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191210155238.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191210160851.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191210161146.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ListArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ListArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/_top-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_top-header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/user/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/Panier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/general/Panier.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/general/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/general/list.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,6 +179,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wf3-gpe\formation-AJAX\green\templates\shop\general" />
       <recent name="C:\xampp\htdocs\wf3-gpe\formation-AJAX\green\templates\security" />
       <recent name="C:\xampp\htdocs\green\templates\shop\user" />
       <recent name="C:\xampp\htdocs\green\public\css\home" />
