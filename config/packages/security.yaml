@@ -9,15 +9,19 @@ security:
         app_user_provider:
             entity:
                 class: App\Entity\User
-                property:
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: ~
-            form_login:
-                default_target_path: shop_home
+            logout:
+                path: app_logout
+                target: shop_home
+            guard:
+                authenticators:
+                    - App\Security\AppUserAuthenticator
                # always_use_default_target_path: true
                 #failure_path: shop_home
             # activate different ways to authenticate

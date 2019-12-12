@@ -1,6 +1,6 @@
 <div class="head-t">
     <ul class="card">
-        <li><a href="{{ path('shop_home') }}" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
+        <li><a href="{{ path('article_add') }}" ><i class="fa fa-heart" aria-hidden="true"></i>Ajouter un article </a></li>
         <li><a href="{{ path('shop_home') }}" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Historique</a></li>
         <li><a href="{{ path('shop_panier') }}" ><i class="fa fa-ship" aria-hidden="true"></i>Mon panier</a></li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}

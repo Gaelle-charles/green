@@ -20,31 +20,37 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="")
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
     private $alias;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="")
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="")
      */
     private $image;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="")
      */
     private $price;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="")
      */
     private $quantity;
 
