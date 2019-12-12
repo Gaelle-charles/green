@@ -1,48 +1,83 @@
 {% extends "indexLayout.html.twig"  %}
 
-
 {% block title %}
-    {{ parent() }}
-        TOUS LES ARTICLES
+
 {% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
 {% endblock %}
 
-    {% block content %}
-        <div class="py-5 bg-light">
-            <div class="container ">
-                <div class="row">
+{#    {% block content %}#}
+{#        <div class="py-5 bg-light">#}
+{#            <div class="container ">#}
+{#                <div class="row">#}
+{#                    {% for article in articles %}#}
+{#                        <div class="col-md-4 mt-4">#}
+{#                            <h5 class="card-title">{{article.title}}</h5>#}
 
-                    {% for article in articles %}
-                        <div class="col-md-4 mt-4">
-                            <div class="card shadow-sm">
-                                <h5 class="card-title">{{article.title}}</h5>
-                                <img class="card-img-top" height="250" width="250" src="{{ asset ( 'images/' ~ article.image )}}" alt="{{article.title}}">
-                                <div class="card-body">
-                                    <div class="card-text">
-                                        <p>{{article.content |striptags }}</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-{#                                        <a href="{{ path('default_article', }  #}
-{#                                            'categorie' : article.category.alias, 'alias': article.alias, 'id' : article.id#}
+{#                            <div class="card-img">#}
+{#                                <img class="card-img-top" height="250" width="250" src="{{ asset ( 'images/' ~ article.image )}}" alt="{{article.title}}">#}
+{#                                <div class="card-body">#}
+{#                                    <div class="card-text">#}
+{#                                        <p>{{article.content |striptags }}</p>#}
+{#                                    </div>#}
+{#                                    <div class="d-flex justify-content-between align-items-center">#}
+{#                                        <a href="{{ path('default_article') }}"#}
+{#                                            'category' : article.category.alias, 'alias': article.alias, 'id' : article.id#}
 {#                                        })}}"#}
-{#                                           class="btn btn-primary">Lire la suite</a>#}
+{#                                           class="btn btn-info">Lire la suite</a>#}
 {#                                        <small class="text-muted">#}
 {#                                            {{ article.user.firstname }} {{ article.user.lastname }}#}
 {#                                        </small>#}
-                                    </div>
-                                </div>
-                            </div> <!-- Fin card -->
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div> <!-- Fin card -->#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+
+{#                </div> <!-- Fin row -->#}
+{#            </div> <!-- Fin container -->#}
+{#        </div>#}
+{#    {% endblock  %}#}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class=" con-w3l agileinf">
+                {% for article in articles %}
+                <div class="col-md-3 pro-1">
+                    <div class="col-m">
+                        <div class="mid-2">
+                        <label for="">{{article.title}}</label>
                         </div>
-                    {% endfor %}
+                        <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+                            <img src="{{ asset ( 'images/' ~ article.image )}}" width="80%" class="img-responsive" alt="{{article.title}}">
+                        </a>
+                        <div class="mid-1">
+                            <div class="women">
+                                <h6><a href="{{ path('default_article', {'alias': 'x', 'category': 'x', 'id': 'x'}) }}">Détails</a></h6>
+                            </div>
+                            <div class="mid-2">
+                                <p ><label>{{article.price}} €</label></p>
+{#                                <div class="block">#}
+{#                                    <div class="starbox small ghosting"> </div>#}
+{#                                </div>#}
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="add">
+                                <button class="btn btn-info my-cart-btn my-cart-b" data-id="36" data-name="Baby Oil" data-summary="summary 36" data-price="6.00" data-quantity="1" data-image="images/of36.png">Add to Cart</button>
+                            </div>
 
-                </div> <!-- Fin row -->
-            </div> <!-- Fin container -->
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
         </div>
-    {% endblock  %}
-
-
+    </div>
+    {% endblock %}
 
 

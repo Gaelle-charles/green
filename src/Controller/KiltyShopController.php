@@ -18,7 +18,6 @@ class KiltyShopController extends AbstractController
      */
     public function home()
     {
-
         return $this->render('shop/home.html.twig');
     }
 }

@@ -1,0 +1,31 @@
+{% extends "indexLayout.html.twig" %}
+
+{% block title %}
+    {{ article.title | title}}
+{% endblock %}
+
+{% block content %}
+    <div class="p-3 mx-auto text-center">
+        <h1 class="display-4">
+            {{ article.title | title}}
+        </h1>
+    </div>
+
+    <div class="py-5 bg-light">
+        <div class="container ">
+            {% for message in app.flashes('notice') %}
+                <div class="flash-notice">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-fluid" src="{{ asset ( 'images/' ~ article.image )}}" alt="{{article.title}}">
+                </div> <!-- Fin col-md-6 -->
+                <div class="col-md-6">
+                    {{ article.content | raw }}
+                </div> <!-- Fin col-md-6 -->
+            </div> <!-- Fin row -->
+        </div> <!-- Fin container -->
+    </div> <!-- Fin py-5 bg-light -->
+{% endblock %}
