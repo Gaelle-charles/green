@@ -1,7 +1,9 @@
 {% for category in categories %}
-    <li>
-        <a href="{{ path('default_category', { 'alias' : category.alias }) }}">
-            {{ category.name }}
-        </a>
-    </li>
+     <div class="w3ls_banner_bottom_grids">
+        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab" class="nav nav-tabs" role="tablist">
+                <li class="categories" role="presentation"><a href=""{{ path('default_category', { 'alias' : category.alias }) }}" id="banana-tab" role="tab" data-toggle="tab" aria-controls="banana" aria-expanded="true">{{ category.name }}</a></li>
+            </ul>
+        </div>
+    </div>
 {% endfor %}
