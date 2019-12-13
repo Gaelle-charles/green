@@ -17,7 +17,6 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
-
 /**
  * Class KiltyConnexionController
  * @package App\Controller
@@ -43,7 +42,6 @@ class UserController extends AbstractController
         $user->setRoles(['ROLE_USER'])->setRegistrationDate(new \DateTime());
 
         $form = $this->createFormBuilder($user)
-
             ->add('roles', ChoiceType::class, [
                 'choices' => [
                     'Visiteur' => self::ROLE_CLIENT,
@@ -52,7 +50,6 @@ class UserController extends AbstractController
                 'expanded' => true,
                 'multiple' => true
             ])
-
             ->add('firstname', TextType::class, [
                 'label' => 'Prénom',
                 'attr' => [
@@ -65,7 +62,6 @@ class UserController extends AbstractController
                     'placeholder' => 'Saisissez votre nom'
                 ]
             ])
-
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'attr' => [
@@ -94,7 +90,7 @@ class UserController extends AbstractController
             $user->setPassword(
                 $encoder->encodePassword($user, $user->getPassword())
             );
-                  # 5. Sauvegarde en BDD
+            # 5. Sauvegarde en BDD
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
@@ -116,4 +112,17 @@ class UserController extends AbstractController
 
     }
 
+    /**
+     * List user products
+     * @Route("/mes-produits.html", name="user_products", methods={"GET"})
+     */
+    public function myProducts()
+    {
+        $articles = $this->getUser()->getArticles();
+
+        return $this->render('shop/general/listUserProducts.html.twig', [
+            'articles' => $articles
+        ]);
     }
+
+}
