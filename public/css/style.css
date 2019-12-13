@@ -2861,7 +2861,6 @@ span.last {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        -moz-background-size: cover;
         min-height:400px;
         margin:15em 0 0;
     }
@@ -2871,7 +2870,6 @@ span.last {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        -moz-background-size: cover;
         min-height:400px;
         margin:15em 0 0;
     }
@@ -2881,14 +2879,11 @@ span.last {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        -moz-background-size: cover;
         min-height:400px;
         margin:15em 0 0;
     }
     .w3layouts-banner-top1{
         min-height:770px;
-        background: #ffb900;
-        background: #ff4f81;
     }
     .w3layouts-banner-top2{
         min-height:770px;
@@ -3000,3 +2995,10 @@ span.last {
     }
     /*-- //banner-top --*/
 }
+
+img .fruit{
+    padding: .35em .625em .75em;
+    margin: 0 2px;
+    border: 1px solid #B2B2B2;
+}
+

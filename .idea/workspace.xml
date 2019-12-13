@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/shop/general/article.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shop/general/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shop/general/listCategory.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/KiltyShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/KiltyShopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/newstyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FormUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FormUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ListArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ListArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_slider.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_slider.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/indexLayout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indexLayout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/indexLayout2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indexLayout2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/general/index.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shop/general/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/general/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop/general/listCategory.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/shop/care.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/care.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,6 +221,7 @@
       <workItem from="1575552015439" duration="2818000" />
       <workItem from="1575637036963" duration="5839000" />
       <workItem from="1575895277688" duration="17737000" />
+      <workItem from="1576261645521" duration="682000" />
     </task>
     <servers />
   </component>
@@ -237,14 +242,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="965" y="181" key="#Inspections" timestamp="1576255341581">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="965" y="181" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1576255341581" />
     <state x="428" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576169267169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="428" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576169267169" />
-    <state x="1114" y="331" key="NewPhpClassDialog" timestamp="1575983800697">
+    <state x="932" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576256311430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1114" y="331" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575983800697" />
+    <state x="932" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576256311430" />
+    <state x="1114" y="331" key="NewPhpClassDialog" timestamp="1576256293310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1114" y="331" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576256293310" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1575914967588">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -143,8 +143,6 @@ class FormUserController extends AbstractController
             ]);
         }
 
-        # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
-
         # Transmission à la Vue
         return $this->render('shop/user/formUser.html.twig',[
             'form' => $form ->createView()

@@ -3,5 +3,5 @@
   #path: /
   #controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
   #defaults:
-   # path: /boutique
+   #path: /boutique
     #permanent: true

@@ -14,7 +14,7 @@ class ListArticlesController extends AbstractController
 {
     /**
      * @return Response
-     * @Route("/index", name="default_index")
+     * @Route("/index", name="default_index", methods={"GET"})
      */
     public function listArticle ()
     {
@@ -29,7 +29,7 @@ class ListArticlesController extends AbstractController
     }
 
     /**
-     * @Route("/category", name="default_category", methods={"GET"})
+     * @Route("/category/{alias}", name="default_category", methods={"GET"})
      * @return Response
      */
 
@@ -41,7 +41,7 @@ class ListArticlesController extends AbstractController
 
         $articles = $category->getArticles();
 
-        return $this->render('shop/general/listCategory.html.twig', [
+        return $this->render('shop/general/list.html.twig', [
             'articles' => $articles,
             'category' => $category
         ]);
@@ -49,14 +49,21 @@ class ListArticlesController extends AbstractController
 
     /**
      * @Route("/{category}/{alias}_{id}.html", name="default_article", methods={"GET"})
+     * @param Article $article
      * @return Response
      */
     public function article(Article $article)
     {
-        return $this->render('shop/general/article.html.twig', [
+        return $this->render('shop/general/list.html.twig', [
             'article' => $article
         ]);
     }
+
+    /**
+     * @Route("/menu",name="menu_category", methods={"GET"})
+     *
+     * @return Response
+     */
 
     public function menu()
     {
@@ -68,4 +75,7 @@ class ListArticlesController extends AbstractController
             'categories' => $categories
         ]);
     }
+
+
+
 }
