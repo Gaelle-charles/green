@@ -25,9 +25,8 @@
             {% include 'components/_top-header.html.twig' %}
             {% include 'components/_nav.html.twig' %}
 
-            {% for category in categories %}
-            <li>{{ category.name }}</li>
-            {% endfor %}
+            {{ render(controller('App\\Controller\\ListArticlesController::menu')) }}
+
         </div>
     </div>
 

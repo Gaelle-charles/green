@@ -19,7 +19,11 @@
                         </a>
                         <div class="mid-1">
                             <div class="women">
-                                <h6><a href="{{ path('default_article', {'alias': 'x', 'category': 'x', 'id': 'x'}) }}">Détails</a></h6>
+                                <h6><a href="{{ path('default_article', {
+                                        'alias' : article.alias,
+                                        'category' : article.category.alias,
+                                        'id' : article.id
+                                    }) }}">Détails</a></h6>
                             </div>
                             <div class="mid-2">
                                 <p ><label>{{article.price}} €</label></p>

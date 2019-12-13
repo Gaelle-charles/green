@@ -10,6 +10,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class ListArticlesController
+ * @package App\Controller
+ * @Route("/boutique")
+ */
 class ListArticlesController extends AbstractController
 {
     /**
@@ -54,16 +59,10 @@ class ListArticlesController extends AbstractController
      */
     public function article(Article $article)
     {
-        return $this->render('shop/general/list.html.twig', [
+        return $this->render('shop/general/article.html.twig', [
             'article' => $article
         ]);
     }
-
-    /**
-     * @Route("/menu",name="menu_category", methods={"GET"})
-     *
-     * @return Response
-     */
 
     public function menu()
     {
@@ -71,7 +70,7 @@ class ListArticlesController extends AbstractController
             ->getRepository(Category::class)
             ->findAll();
 
-        return $this->render('shop/general/list.html.twig',[
+        return $this->render('shop/general/listCategory.html.twig',[
             'categories' => $categories
         ]);
     }
