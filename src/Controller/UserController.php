@@ -113,6 +113,7 @@ class UserController extends AbstractController
     }
 
     /**
+     * Admin user
      * List user products
      * @Route("/mes-produits.html", name="user_products", methods={"GET"})
      */

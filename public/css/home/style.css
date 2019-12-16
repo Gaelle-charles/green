@@ -6,6 +6,8 @@
 --*/
 /*-- Reset-Code --*/
 
+
+
 body {
 	padding: 0;
 	margin: 0;
@@ -151,6 +153,7 @@ a:focus, a:hover {
 .formborder {
     border-bottom: 1px solid #fff;
 }
+
 .head-search input[type="text"] {
     background: none;
     border: none;
@@ -298,10 +301,10 @@ ul.agile_forms li a:hover{
 	    background: #efb312;
 }
 ul.agile_forms li{
-	
+
 	display:inline-block;
 	list-style:none;
-	
+
 }
 /*-- //banner --*/
 /*-- banner-top --*/
@@ -311,40 +314,40 @@ ul.agile_forms li{
 }
 .bannerimg{
     background: url(../images/banana.png) no-repeat 0px 0px;
-    background-size: cover;	
-	-webkit-background-size: cover;	
+    background-size: cover;
+	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;		
+	-o-background-size: cover;
 	-moz-background-size: cover;
 	min-height:400px;
 	margin:15em 0 0;
 }
 .bannerimg1{
     background: url(../images/apple.png) no-repeat 0px 0px;
-    background-size: cover;	
-	-webkit-background-size: cover;	
+    background-size: cover;
+	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;		
+	-o-background-size: cover;
 	-moz-background-size: cover;
 	min-height:400px;
 	margin:15em 0 0;
 }
 .bannerimg2{
     background: url(../images/lemon.png) no-repeat 0px 0px;
-    background-size: cover;	
-	-webkit-background-size: cover;	
+    background-size: cover;
+	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;		
+	-o-background-size: cover;
 	-moz-background-size: cover;
 	min-height:400px;
 	margin:15em 0 0;
 }
 .bannerimg3{
     background: url(../images/orange.png) no-repeat 0px 0px;
-    background-size: cover;	
-	-webkit-background-size: cover;	
+    background-size: cover;
+	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;		
+	-o-background-size: cover;
 	-moz-background-size: cover;
 	min-height:400px;
 	margin:15em 0 0;
@@ -462,9 +465,9 @@ ul.agile_forms li{
     letter-spacing: 4px;
     position: relative;
 }
-/*-- //banner-top --*/ 
+/*-- //banner-top --*/
 
-/*-- about --*/ 
+/*-- about --*/
 .about,.service-w3ls,.team,.subscribe,.clients {
     padding: 7em 0;
 }
@@ -487,7 +490,7 @@ h2.heading,h3.heading {
     line-height: 28px;
     margin: 2em 0 0;
 }
-/*-- //about --*/ 
+/*-- //about --*/
 
 /* services */
 /*-- services section --*/
@@ -535,38 +538,38 @@ section.service-w3ls h4 {
 	border-radius: 50%;
 	position: relative;
 	cursor: default;
-	box-shadow: 
+	box-shadow:
 		inset 0 0 0 10px rgba(255,255,255,0.6),
 		0 1px 2px rgba(0,0,0,0.1);
-		
+
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
 	-o-transition: all 0.4s ease-in-out;
 	-ms-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
-.ch-img-1 { 
+.ch-img-1 {
 	background-image: url(../images/serv1.jpg);
 }
-.ch-img-2 { 
+.ch-img-2 {
 	background-image: url(../images/serv2.jpg);
 }
-.ch-img-3 { 
+.ch-img-3 {
 	background-image: url(../images/serv3.jpg);
 }
-.ch-img-4 { 
+.ch-img-4 {
 	background-image: url(../images/serv4.jpg);
 }
-.ch-img-5 { 
+.ch-img-5 {
 	background-image: url(../images/serv5.jpg);
 }
-.ch-img-6 { 
+.ch-img-6 {
 	background-image: url(../images/serv6.jpg);
 }
-.ch-img-7 { 
+.ch-img-7 {
 	background-image: url(../images/serv7.jpg);
 }
-.ch-img-8 { 
+.ch-img-8 {
 	background-image: url(../images/serv8.jpg);
 }
 .service-bottomgrids {
@@ -617,7 +620,7 @@ section.service-w3ls h4 {
 	transition: all 1s ease-in-out 0.4s;
 }
 .col-lg-3.col-md-3.col-sm-6.col-xs-12.serv-w3layouts:hover .ch-item {
-	box-shadow: 
+	box-shadow:
 		inset 0 0 0 1px rgba(255,255,255,0.1),
 		0 1px 2px rgba(0,0,0,0.1);
 }
@@ -666,7 +669,7 @@ section.service-w3ls h4 {
 .g1 {
 	position: relative;
 	display: block;
-}  
+}
 .g1 h4 {
     text-align: center;
     margin: 20px 0 5px;
@@ -744,7 +747,7 @@ section.service-w3ls h4 {
     letter-spacing: 0.5px;
 }
 .g1:hover .agile-dish-caption {
-	display: block; 
+	display: block;
 	-webkit-transform:scale(1);
 	-moz-transform:scale(1);
 	-o-transform:scale(1);
@@ -760,7 +763,7 @@ section.service-w3ls h4 {
     -o-transform: translate3d( 0px, 0px, 0px );
     transform: translate3d( 0px, 0px, 0px );
 }
-#owl-demo .item img { 
+#owl-demo .item img {
     width: 100%;
 }
 @media(max-width:480px) {
@@ -794,7 +797,7 @@ ul.top-links li a i.fa {
 	-moz-transition:all 0.5s ease-in-out;
 	-o-transition:all 0.5s ease-in-out;
 	-ms-transition:all 0.5s ease-in-out;
-} 
+}
 ul.top-links li a i.fa:hover {
 	color: #fff;
     background-color: #efb312;
@@ -1140,7 +1143,7 @@ button.btn1:hover i.fa.fa-paper-plane-o{
 	bottom: 24px;
 	right: 1%;
 	overflow: hidden;
-	z-index: 999; 
+	z-index: 999;
     width: 64px;
     height: 64px;
 	border: none;
@@ -1558,7 +1561,7 @@ button.btn1:hover i.fa.fa-paper-plane-o{
 	.client-grids {
 		width: 100%;
 		float: none;
-	}	
+	}
 }
 @media screen and (max-width: 600px){
 	.agileits-banner-info h3 {
