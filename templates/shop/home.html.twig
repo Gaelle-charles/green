@@ -5,23 +5,27 @@
 {% endblock %}
 
 {% block content %}
-    <!-- Carousel ================================================== -->
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+        </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="item active">
+            <div class="item">
                 <a href="#"> <img class="first-slide" src="{{ asset('images/ET SI ON MANGEAIT LOCAL.png') }}" alt="First slide"></a>
             </div>
             <div class="item">
                 <a href="#"> <img class="second-slide" src="{{ asset('images/ET SI ON MANGEAIT LOCAL (1).png') }}" alt="Second slide"></a>
             </div>
-            <div class="item">
+            <div class="item active">
                 <a href="#"><img class="third-slide" src="{{ asset('images/ET SI ON MANGEAIT LOCAL (2).png') }}" alt="Third slide"></a>
             </div>
         </div>
     </div>
-    <!-- /.carousel -->
+
 
     <!-- TEXT 1 : ACCUEIL -->
     <div class="about" id="about">
@@ -114,14 +118,6 @@
     </div>
     <!--//team-->
 
-{% endblock %}
-
-{% block slider %}{% endblock %}
-
-{% block final_stylesheets %}
-{% endblock %}
-
-{% block final_javascripts %}
 {% endblock %}
 
 

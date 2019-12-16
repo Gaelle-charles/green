@@ -1,31 +1,30 @@
 {% extends "base.html.twig" %}
 
-{% block head_javascripts %}
-
-{% endblock %}
-
 {% block body %}
     <div class="header">
         <div class="container">
             <div class="logo">
-                <img src="{{ asset('images/Logo.png') }}" alt="">
-{#                <h1 ><a href="{{ path('shop_home') }}">Green Kilty<span>Votre local shop !</span></a></h1>#}
+                <a href="{{ path('shop_home') }}">
+                    <img src="{{ asset('images/Logo.png') }}" alt="Green Kilty">
+                </a>
             </div>
 
             {% include 'components/_top-header.html.twig' %}
-            {% include 'components/_nav.html.twig' %}
 
-            {{ render(controller('App\\Controller\\ListArticlesController::menu')) }}
-
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                {% include 'components/_nav.html.twig' %}
+            </div>
         </div>
     </div>
 
-    {% block slider '' %}
     <div class="content-top ">
-        <div class="container ">
+        <div class="container-fluid">
             {% block content '' %}
         </div>
     </div>
+
     {% include 'components/_footer.html.twig' %}
 
 {% endblock %}

@@ -1,7 +1,7 @@
 
-#boutique:
-  #path: /
-  #controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
-  #defaults:
-   #path: /boutique
-    #permanent: true
+boutique:
+  path: /
+  controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+  defaults:
+    path: /boutique
+    permanent: true
