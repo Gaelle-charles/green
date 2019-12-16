@@ -2,80 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ad014de-47b9-4347-8863-cc00f0947267" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/green.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/green.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/home/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/newstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/newstyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ListArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ListArticlesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_footer.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/components/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/general/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/general/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/indexLayout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indexLayout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shop/general/listCategory.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/general/listCategory.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop/general/listUserProducts.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/general/listUserProducts.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/shop/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/.idea/themes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/care.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/care.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/codes.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/codes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/css/font-awesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/css/jstarbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/css/jstarbox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/faqs.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/faqs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/hold.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/hold.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/easing.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/easing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/easyResponsiveTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/easyResponsiveTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/jquery-1.11.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/jquery-1.11.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/jquery.mycart.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/jquery.mycart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/jquery.vide.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/jquery.vide.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/jquery.zoomtoo.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/jquery.zoomtoo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/jstarbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/jstarbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/modernizr.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/modernizr.custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/js/move-top.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/js/move-top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/kitchen.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/kitchen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/offer.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/offer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/shipping.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/shipping.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/terms.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/terms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/w3layouts-License.txt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/w3layouts-License.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/shop/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/shop/wishlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/.idea/vitrine.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/css/JiSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/css/JiSlider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/css/owl.carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/css/simpleLightbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/css/simpleLightbox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/JiSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/JiSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/SmoothScroll.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/SmoothScroll.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/easing.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/easing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/jquery-2.1.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/jquery-2.1.4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/jquery.wmuSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/jquery.wmuSlider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/move-top.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/move-top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/owl.carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/owl.carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/js/simpleLightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/js/simpleLightbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/vitrine/w3layouts-License.txt" beforeDir="false" afterPath="$PROJECT_DIR$/themes/vitrine/w3layouts-License.txt" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/vendor/composer/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/annotations/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/collections/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/common/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/dbal/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/event-manager/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/inflector/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/instantiator/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/lexer/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/migrations/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/orm/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/persistence/" />
+    <ignored path="$PROJECT_DIR$/vendor/doctrine/reflection/" />
+    <ignored path="$PROJECT_DIR$/vendor/easycorp/easy-log-handler/" />
+    <ignored path="$PROJECT_DIR$/vendor/egulias/email-validator/" />
+    <ignored path="$PROJECT_DIR$/vendor/jdorn/sql-formatter/" />
+    <ignored path="$PROJECT_DIR$/vendor/monolog/monolog/" />
+    <ignored path="$PROJECT_DIR$/vendor/nikic/php-parser/" />
+    <ignored path="$PROJECT_DIR$/vendor/ocramius/package-versions/" />
+    <ignored path="$PROJECT_DIR$/vendor/ocramius/proxy-manager/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/" />
+    <ignored path="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/container/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/event-dispatcher/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/link/" />
+    <ignored path="$PROJECT_DIR$/vendor/psr/log/" />
+    <ignored path="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/asset/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/browser-kit/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/cache/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/cache-contracts/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/config/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/console/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/css-selector/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/debug-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/debug-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/dependency-injection/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/dom-crawler/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/dotenv/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/error-handler/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/event-dispatcher/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/expression-language/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/filesystem/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/finder/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/flex/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/form/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/framework-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-client/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-client-contracts/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-foundation/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/http-kernel/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/inflector/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/intl/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/mailer/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/maker-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/mime/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/monolog-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/monolog-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/notifier/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/options-resolver/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/orm-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/polyfill-php73/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/process/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/profiler-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/property-access/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/property-info/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/routing/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security-core/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security-csrf/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security-guard/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/security-http/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/serializer/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/serializer-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/service-contracts/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/stopwatch/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/string/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/test-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/translation/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/translation-contracts/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/twig-bridge/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/twig-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/twig-pack/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/validator/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/var-dumper/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/var-exporter/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/web-link/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/symfony/yaml/" />
+    <ignored path="$PROJECT_DIR$/vendor/twig/extra-bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/twig/twig/" />
+    <ignored path="$PROJECT_DIR$/vendor/webmozart/assert/" />
+    <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-code/" />
+    <ignored path="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +133,97 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/indexLayout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#217#226#0#Twig" expanded="true" />
+                <element signature="e#380#412#0#Twig" expanded="true" />
+                <element signature="e#666#694#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/components/_nav.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="67" lean-forward="true" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ListArticlesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="72" column="49" lean-forward="true" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/shop/general/listCategory.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+              <folding>
+                <element signature="e#244#260#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/components/_footer.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+              <folding>
+                <element signature="e#1003#1008#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/home/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="910">
+              <caret line="3164" column="1" selection-start-line="3164" selection-start-column="1" selection-end-line="3164" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/shop/home.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3068">
+              <caret line="118" column="17" selection-start-line="76" selection-end-line="118" selection-end-column="17" />
+              <folding>
+                <element signature="e#12#33#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,6 +242,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Controller/KiltyFrontController.php" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
+        <option value="$PROJECT_DIR$/templates/components/_nav.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ListArticlesController.php" />
+        <option value="$PROJECT_DIR$/templates/components/_footer.html.twig" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/css/home/style.css" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/templates/shop/home.html.twig" />
+        <option value="$PROJECT_DIR$/templates/indexLayout.html.twig" />
+        <option value="$PROJECT_DIR$/templates/shop/general/listCategory.html.twig" />
+      </list>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -216,9 +371,81 @@
       <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
     </include_path>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="5760" />
+    <option name="y" value="348" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
   <component name="ProjectId" id="1UWuxxzmvNG31U6VOdIOl4nEh7B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-kilty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-kilty" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
@@ -260,6 +487,18 @@
       <recent name="C:\xampp\htdocs\green\public\css" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -290,8 +529,38 @@
       <workItem from="1576267204864" duration="4272000" />
       <workItem from="1576504763798" duration="5651000" />
       <workItem from="1576510576924" duration="3625000" />
+      <workItem from="1576515762707" duration="3929000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3929000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="5760" y="348" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Remote Host" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -302,8 +571,28 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -342,5 +631,142 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576511808858" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Controller/HelperTrait.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/FormUserController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CardController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/KiltyShopController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/KiltyFrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/shop/care.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shop/general/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/shop/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="3164" column="1" selection-start-line="3164" selection-start-column="1" selection-end-line="3164" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/shop/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="20" column="13" selection-end-line="3164" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/home/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="3164" column="1" selection-start-line="3164" selection-start-column="1" selection-end-line="3164" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shop/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3068">
+          <caret line="118" column="17" selection-start-line="76" selection-end-line="118" selection-end-column="17" />
+          <folding>
+            <element signature="e#12#33#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/components/_footer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+          <folding>
+            <element signature="e#1003#1008#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/indexLayout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#217#226#0#Twig" expanded="true" />
+            <element signature="e#380#412#0#Twig" expanded="true" />
+            <element signature="e#666#694#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/components/_nav.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="67" lean-forward="true" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ListArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="72" column="49" lean-forward="true" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shop/general/listCategory.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding>
+            <element signature="e#244#260#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -1,9 +1,11 @@
-{% for category in categories %}
-     <div class="w3ls_banner_bottom_grids">
-        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-            <ul id="myTab" class="nav nav-tabs" role="tablist">
-                <li class="categories" role="presentation"><a href="{{ path('default_category', { 'alias' : category.alias }) }}" id="banana-tab" role="tab" data-toggle="tab" aria-controls="banana" aria-expanded="true">{{ category.name }}</a></li>
-            </ul>
-        </div>
-    </div>
-{% endfor %}
+<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+    <ul class="nav navbar-nav ">
+        {% for category in categories %}
+            <li class="hyper">
+                <a href="{{ path('default_category', { 'alias' : category.alias }) }}" class="hyper">
+                    <span>{{ category.name }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,19 +1,4 @@
 
         <!--Navbar  Menu-->
-        <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-            <ul class="nav navbar-nav ">
-                <li class="dropdown-toggle  hyper" data-toggle="dropdown"><a href="{{ path('shop_home') }}" class="hyper"><span>Accueil</span></a></li>
-                <li class="dropdown-toggle  hyper" data-toggle="dropdown"><a href="{{ path('shop_home') }}" class="hyper"><span>A propos de nous</span></a></li>
-                <li class="dropdown-toggle  hyper" data-toggle="dropdown"><a href="{{ path('default_index') }}" class="hyper"><span>Les produits</span></a></li>
-                <li class="dropdown-toggle  hyper" data-toggle="dropdown"><a href="{{ path('shop_home') }}" class="hyper"><span>Les commerçants</span></a></li>
-                <li class="dropdown-toggle  hyper" data-toggle="dropdown"><a href="{{ path('shop_home') }}" class="hyper"><span>Contact</span></a></li>
-            </ul>
-        </div>
-
+            {{ render(controller('App\\Controller\\ListArticlesController::menu')) }}
         <!--Navbar  Menu-->
-
-    {#    <div class="cart" >#}
-{#        <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>#}
-{#    </div>#}
-{#    <div class="clearfix"></div>#}
-{#</div>#}

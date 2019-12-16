@@ -64,7 +64,7 @@ class ListArticlesController extends AbstractController
         ]);
     }
 
-    public function menu()
+    public function  menu()
     {
         $categories = $this->getDoctrine()
             ->getRepository(Category::class)
