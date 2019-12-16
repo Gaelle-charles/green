@@ -5,7 +5,7 @@
         <div class="container">
             <div class="logo">
                 <a href="{{ path('shop_home') }}">
-                    <img src="{{ asset('images/Logo.png') }}" alt="Green Kilty">
+                    <img src="{{ asset('images/Logo.png') }}" class="logo1" alt="Green Kilty">
                 </a>
             </div>
 
@@ -33,7 +33,6 @@
     <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('js/jquery.vide.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <script type='text/javascript' src="{{ asset('js/jquery.mycart.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/move-top.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/easing.js') }}"></script>
 
@@ -67,47 +66,6 @@
                     }
                 })
             });
-        });
-    </script>
-    <script type="text/javascript">
-        $(function () {
-
-            $().UItoTop({ easingType: 'easeOutQuart' });
-
-            var goToCartIcon = function($addTocartBtn){
-                var $cartIcon = $(".my-cart-icon");
-                var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-                $addTocartBtn.prepend($image);
-                var position = $cartIcon.position();
-                $image.animate({
-                    top: position.top,
-                    left: position.left
-                }, 500 , "linear", function() {
-                    $image.remove();
-                });
-            };
-
-            $('.my-cart-btn').myCart({
-                classCartIcon: 'my-cart-icon',
-                classCartBadge: 'my-cart-badge',
-                affixCartIcon: true,
-                checkoutCart: function(products) {
-                    $.each(products, function(){
-                        console.log(this);
-                    });
-                },
-                clickOnAddToCart: function($addTocart){
-                    goToCartIcon($addTocart);
-                },
-                getDiscountPrice: function(products) {
-                    var total = 0;
-                    $.each(products, function(){
-                        total += this.quantity * this.price;
-                    });
-                    return total * 1;
-                }
-            });
-
         });
     </script>
 {% endblock %}
