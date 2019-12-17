@@ -91,4 +91,10 @@ class CardController extends AbstractController
         $session->set('panier', $panier);
         return $this->redirectToRoute("shop_panier");
     }
+
+    public function sendEmail()
+    {
+
+        
+    }
 }
