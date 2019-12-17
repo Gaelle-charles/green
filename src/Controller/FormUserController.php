@@ -47,7 +47,7 @@ class FormUserController extends AbstractController
             ->add('title', TextType::class, [
                 'required' => true,
                 'label' => 'Titre',
-                'attr' =>[
+                'attr' => [
                     'placeholder' => 'Titre de l\'Article ...'
                 ]
             ])
@@ -62,7 +62,7 @@ class FormUserController extends AbstractController
             # Contenu
             ->add('content', TextareaType::class, [
                 'required' => false,
-                'label' =>'Description l\'article'
+                'label' => 'Description l\'article'
             ])
 
             # Price
@@ -73,13 +73,13 @@ class FormUserController extends AbstractController
 
             # Quantity
             ->add('quantity', NumberType::class, [
-                'label' =>'Quantité vendue'
+                'label' => 'Quantité vendue'
             ])
 
             # Image
-            ->add('image', FileType::class,[
+            ->add('image', FileType::class, [
                 'label' => 'Photos (fortement conseillée)',
-                'attr' =>[
+                'attr' => [
                     'class' => 'dropify'
                 ]
             ])
@@ -99,22 +99,22 @@ class FormUserController extends AbstractController
         $form->handleRequest($request);
 
         # Soumission du form et validation
-        if ( $form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
 
             # -- Upload de l'image
             /** @var UploadedFile $imageFile */
             $imageFile = $form['image']->getData();
-            if ($imageFile){
+            if ($imageFile) {
 
                 # --------------------- ❌ NE PAS OUBLIER LA ROUTE ❌ ------------
 
-                $newFilename = $this->slugify($article->getTitle()). '-' . uniqid(). '.'. $imageFile->guessExtension();
+                $newFilename = $this->slugify($article->getTitle()) . '-' . uniqid() . '.' . $imageFile->guessExtension();
                 try {
                     $imageFile->move(
                         $this->getParameter('products_images'),
                         $newFilename
                     );
-                } catch (FileException $e){
+                } catch (FileException $e) {
 
                 }
                 $article->setImage($newFilename);
@@ -123,31 +123,31 @@ class FormUserController extends AbstractController
             // Fin de upload de l'image
 
             # Génération de l'alias de l'article
-            $article->setAlias( $this->slugify( $article->getTitle()));
+            $article->setAlias($this->slugify($article->getTitle()));
 
             # Sauvegarde en bdd
             $em = $this->getDoctrine()->getManager();
-            $em -> persist($article);
-            $em -> flush();
+            $em->persist($article);
+            $em->flush();
 
             # Notification
-            $this ->addFlash('notice',
+            $this->addFlash('notice',
                 'Votre article est désormais en ligne !');
 
             # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
             # Redirection
             return $this->redirectToRoute('shop_home', [
-                'category' => $article-> getCategory() -> getAlias(),
-                'alias' => $article -> getAlias(),
-                'id' => $article-> getId()
+                'category' => $article->getCategory()->getAlias(),
+                'alias' => $article->getAlias(),
+                'id' => $article->getId()
             ]);
         }
 
         # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
 
         # Transmission à la Vue
-        return $this->render('shop/user/formUser.html.twig',[
-            'form' => $form ->createView()
+        return $this->render('shop/user/formUser.html.twig', [
+            'form' => $form->createView()
         ]);
     }
 }

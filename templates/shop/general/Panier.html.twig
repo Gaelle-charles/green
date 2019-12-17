@@ -16,6 +16,7 @@
                         <table class="table">
                             <thead>
                             <tr>
+                                <!--header du tableau-->
                                 <th>Produit</th>
                                 <th>Prix</th>
                                 <th>Quantité</th>
@@ -31,6 +32,7 @@
                                     <td>{{ item.article.quantity }}</td>
                                     <td>{{ item.article.price * item.quantity }}</td>
                                     <td>
+                                        <!--afficher l'addresse de la fonction remove en passant en paramètre id de l'article -->
                                         <a href="{{ path('panier_remove', {'id': item.article.id}) }}" class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash"></i>
                                         </a>
