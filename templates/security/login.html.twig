@@ -14,9 +14,11 @@
                     {% endif %}
 
                     {% if app.user %}
-                        <div class="mb-3">
-                            You are logged in as {{ app.user.firstname }}, <a href="{{ path('app_logout') }}">Logout</a>
-                        </div>
+                        {% for message in app.flashes('notice') %}
+                            <div class="alert-success">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
                     {% endif %}
 
                     <h1 class="text-center">Connexion</h1>

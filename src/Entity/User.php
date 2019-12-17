@@ -24,22 +24,22 @@ class User implements UserInterface
     private $firstname;
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="")
+     * @Assert\NotBlank(message="vous avez oublier votre prenom")
      */
     private $lastname;
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="")
+     * @Assert\NotBlank(message="vous avez oublier votre nom")
      */
     private $email;
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="")
+     * @Assert\NotBlank(message="votre email est obligatoire")
      */
     private $password;
     /**
      * @ORM\Column(type="datetime")
-     * @Assert\NotBlank(message="")
+     * @Assert\NotBlank(message="vous avez oubliez votre mot de passe")
      */
     private $registrationDate;
     /**
