@@ -1,10 +1,11 @@
 <?php
-
 namespace App\Entity;
-
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
@@ -16,43 +17,40 @@ class User implements UserInterface
      * @ORM\Column(type="integer")
      */
     private $id;
-
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Not blank bro...")
+     * @Assert\NotBlank(message="")
      */
     private $firstname;
-
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="")
      */
     private $lastname;
-
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="")
      */
     private $email;
-
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="")
      */
     private $password;
-
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\NotBlank(message="")
      */
     private $registrationDate;
-
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     *
      */
     private $lastLoginDate;
-
     /**
      * @ORM\Column(type="array")
      */
     private $roles = [];
-
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="user")
      */
@@ -61,6 +59,7 @@ class User implements UserInterface
     public function __construct()
     {
         $this->articles = new ArrayCollection();
+        $this->registrationDate = new \DateTime();
     }
 
     public function getId(): ?int
@@ -76,7 +75,6 @@ class User implements UserInterface
     public function setFirstname(string $firstname): self
     {
         $this->firstname = $firstname;
-
         return $this;
     }
 
@@ -88,7 +86,6 @@ class User implements UserInterface
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
-
         return $this;
     }
 
@@ -100,7 +97,6 @@ class User implements UserInterface
     public function setEmail(string $email): self
     {
         $this->email = $email;
-
         return $this;
     }
 
@@ -112,7 +108,6 @@ class User implements UserInterface
     public function setPassword(string $password): self
     {
         $this->password = $password;
-
         return $this;
     }
 
@@ -124,7 +119,6 @@ class User implements UserInterface
     public function setRegistrationDate(\DateTimeInterface $registrationDate): self
     {
         $this->registrationDate = $registrationDate;
-
         return $this;
     }
 
@@ -136,7 +130,6 @@ class User implements UserInterface
     public function setLastLoginDate(?\DateTimeInterface $lastLoginDate): self
     {
         $this->lastLoginDate = $lastLoginDate;
-
         return $this;
     }
 
@@ -148,7 +141,6 @@ class User implements UserInterface
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
-
         return $this;
     }
 
@@ -166,7 +158,6 @@ class User implements UserInterface
             $this->articles[] = $article;
             $article->setUser($this);
         }
-
         return $this;
     }
 
@@ -179,7 +170,42 @@ class User implements UserInterface
                 $article->setUser(null);
             }
         }
-
         return $this;
     }
 
+    /**
+     * Returns the salt that was originally used to encode the password.
+     *
+     * This can return null if the password was not encoded using a salt.
+     *
+     * @return string|null The salt
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+
+    /**
+     * Returns the username used to authenticate the user.
+     *
+     * @return string The username
+     */
+    public function getUsername()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+    }
+
+}

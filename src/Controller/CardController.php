@@ -6,7 +6,6 @@ use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
-
 class CardController extends AbstractController
 {
     /**
@@ -41,7 +40,6 @@ class CardController extends AbstractController
             'total'=> $total
         ]);
     }
-
     /**
      * @Route("/panier/add/{id}", name="panier_add")
      */
@@ -49,7 +47,6 @@ class CardController extends AbstractController
     {
         #$session = $request->getSession();
         $panier = $session->get('panier', []);
-
         if (!empty($panier[$id])) {
             $panier[$id]++;
         } else {

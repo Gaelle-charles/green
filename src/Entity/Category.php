@@ -51,7 +51,6 @@ class Category
     public function setName(string $name): self
     {
         $this->name = $name;
-
         return $this;
     }
 
@@ -63,7 +62,6 @@ class Category
     public function setAlias(string $alias): self
     {
         $this->alias = $alias;
-
         return $this;
     }
 
@@ -81,7 +79,6 @@ class Category
             $this->articles[] = $article;
             $article->setCategory($this);
         }
-
         return $this;
     }
 
@@ -94,7 +91,6 @@ class Category
                 $article->setCategory(null);
             }
         }
-
         return $this;
     }
 }

@@ -28,7 +28,7 @@ class FormUserController extends AbstractController
     /**
      * Formulaire pour ajouter des articles
      * @Route("/ajouter-un-article", name="article_add")
-     * @Security("is_granted('ROLE_ADMIN')")
+     * @Security("is_granted('ROLE_USER')")
      * @param Request $request
      * @return Response
      */
@@ -131,19 +131,17 @@ class FormUserController extends AbstractController
             $em -> flush();
 
             # Notification
-            $this ->addFlash('notice',
+            $this ->addFlash('success',
                 'Votre article est désormais en ligne !');
 
             # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
             # Redirection
-            return $this->redirectToRoute('shop_home', [
+            return $this->redirectToRoute('default_article', [
                 'category' => $article-> getCategory() -> getAlias(),
                 'alias' => $article -> getAlias(),
                 'id' => $article-> getId()
             ]);
         }
-
-        # -------------- ❌ NE PAS OUBLIER LA ROUTE ❌------------
 
         # Transmission à la Vue
         return $this->render('shop/user/formUser.html.twig',[

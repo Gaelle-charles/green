@@ -39,7 +39,7 @@ class AppUserAuthenticator extends AbstractFormLoginAuthenticator implements Pas
 
     public function supports(Request $request)
     {
-        return 'shop_home' === $request->attributes->get('_route')
+        return 'shop_login' === $request->attributes->get('_route')
             && $request->isMethod('POST');
     }
 
@@ -99,6 +99,6 @@ class AppUserAuthenticator extends AbstractFormLoginAuthenticator implements Pas
 
     protected function getLoginUrl()
     {
-        return $this->urlGenerator->generate('app_logout');
+        return $this->urlGenerator->generate('shop_login');
     }
 }

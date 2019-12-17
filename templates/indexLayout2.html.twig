@@ -1,15 +1,5 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheets %}
-
-    <link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
-    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet"  /><!-- Font awesome css file -->
-    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
-    <link href="{{ asset('css/jstarbox.css') }}" rel="stylesheet" type="text/css" media="screen" />
-    <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-{% endblock %}
 
 {% block head_javascripts %}
 
@@ -19,7 +9,7 @@
     <div class="header">
         <div class="container">
             <div class="logo">
-                <img src="{{ asset('images/Logo.png') }}" alt="">
+                <img src="{{ asset('images/Logo.png') }}"  class="logo1" alt="">
 {#                <h1 ><a href="{{ path('shop_home') }}">Green Kilty<span>Votre local shop !</span></a></h1>#}
             </div>
             {% include 'components/_top-header.html.twig' %}
@@ -77,46 +67,6 @@
             });
         });
     </script>
-    <script type="text/javascript">
-        $(function () {
 
-            $().UItoTop({ easingType: 'easeOutQuart' });
-
-            var goToCartIcon = function($addTocartBtn){
-                var $cartIcon = $(".my-cart-icon");
-                var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-                $addTocartBtn.prepend($image);
-                var position = $cartIcon.position();
-                $image.animate({
-                    top: position.top,
-                    left: position.left
-                }, 500 , "linear", function() {
-                    $image.remove();
-                });
-            };
-
-            $('.my-cart-btn').myCart({
-                classCartIcon: 'my-cart-icon',
-                classCartBadge: 'my-cart-badge',
-                affixCartIcon: true,
-                checkoutCart: function(products) {
-                    $.each(products, function(){
-                        console.log(this);
-                    });
-                },
-                clickOnAddToCart: function($addTocart){
-                    goToCartIcon($addTocart);
-                },
-                getDiscountPrice: function(products) {
-                    var total = 0;
-                    $.each(products, function(){
-                        total += this.quantity * this.price;
-                    });
-                    return total * 1;
-                }
-            });
-
-        });
-    </script>
 {% endblock %}
 

@@ -17,7 +17,6 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
-
 /**
  * Class KiltyConnexionController
  * @package App\Controller
@@ -43,16 +42,14 @@ class UserController extends AbstractController
         $user->setRoles(['ROLE_USER'])->setRegistrationDate(new \DateTime());
 
         $form = $this->createFormBuilder($user)
-
             ->add('roles', ChoiceType::class, [
                 'choices' => [
                     'Visiteur' => self::ROLE_CLIENT,
                     'Commerçant' => self::ROLE_USER,
                 ],
                 'expanded' => true,
-                'multiple' => false
+                'multiple' => true
             ])
-
             ->add('firstname', TextType::class, [
                 'label' => 'Prénom',
                 'attr' => [
@@ -65,7 +62,6 @@ class UserController extends AbstractController
                     'placeholder' => 'Saisissez votre nom'
                 ]
             ])
-
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'attr' => [
@@ -94,7 +90,7 @@ class UserController extends AbstractController
             $user->setPassword(
                 $encoder->encodePassword($user, $user->getPassword())
             );
-                  # 5. Sauvegarde en BDD
+            # 5. Sauvegarde en BDD
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
@@ -107,6 +103,7 @@ class UserController extends AbstractController
             # 7. Redirection sur la page de Connexion
 
 
+
         #Transmission du Formulaire a la vue
         return $this->render('shop/user/register.html.twig', [
             'form' => $form->createView()
@@ -114,11 +111,10 @@ class UserController extends AbstractController
 
     }
 
-
     /**
-     * @Route("/login", name="shop_login", methods={"GET|POST"})
-     * @param AuthenticationUtils $authenticationUtils
-     * @return Response
+     * Admin user
+     * List user products
+     * @Route("/mes-produits.html", name="user_products", methods={"GET"})
      */
     public function login( AuthenticationUtils $authenticationUtils ):Response
     { //
@@ -139,4 +135,13 @@ class UserController extends AbstractController
         throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
     }
 
+    public function myProducts()
+    {
+        $articles = $this->getUser()->getArticles();
+
+        return $this->render('shop/general/listUserProducts.html.twig', [
+            'articles' => $articles
+        ]);
     }
+
+}

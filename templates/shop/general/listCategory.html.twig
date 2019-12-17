@@ -1,0 +1,12 @@
+<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+    <ul class="nav navbar-nav ">
+        {% for category in categories %}
+            <li class="hyper">
+                <a href="{{ path('default_category', { 'alias' : category.alias }) }}" class="hyper">
+                    <span>{{ category.name }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+

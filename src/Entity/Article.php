@@ -20,31 +20,38 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous avez oublié le titre.")
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
     private $alias;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous avez oublié le contenu.")
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Image( mimeTypesMessage="Vérifiez le format de votre image",
+     *     maxSize="2M", maxSizeMessage="Votre image est trop lourde.")
      */
     private $image;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Vous avez oublié le prix.")
      */
     private $price;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Vous avez oublié la quantité.")
      */
     private $quantity;
 
