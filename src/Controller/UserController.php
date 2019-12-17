@@ -101,7 +101,7 @@ class UserController extends AbstractController
                 'Félicitation vous êtes inscris !');
 
             # 7. Redirection sur la page de Connexion
-
+        }
 
 
         #Transmission du Formulaire a la vue
