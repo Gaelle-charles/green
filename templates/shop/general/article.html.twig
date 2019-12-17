@@ -1,11 +1,5 @@
 {% extends "indexLayout.html.twig" %}
 
-{% block title %}
-    {{ category.name }}
-{% endblock %}
-
-
-
 {% block content %}
 
     <div class="single">
@@ -35,7 +29,7 @@
                             <li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
                         </ul>
                         <div class="add add-3">
-                            <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Wheat" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/si.jpg">Ajouter au panier</button>
+                            <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Wheat" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/si.jpg"><a href="{{ path('panier_add', {'id':article.id}) }}">Ajouter au panier</a></button>
                         </div>
                         <div class="clearfix"> </div>
                     </div>

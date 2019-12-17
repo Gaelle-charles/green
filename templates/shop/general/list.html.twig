@@ -4,13 +4,13 @@
     {{ parent() }}
 {% endblock %}
 
-{% block title %}
-    {{ article.title | title}}
-{% endblock %}
+{#{% block title %}#}
+{#    {{ article.title | title}}#}
+{#{% endblock %}#}
 
 {% block content %}
     <div class="p-3 mx-auto text-center">
-        <h1 class="display-4">{{ category.name}}</h1>
+        <h1 class="display-4">{{ category.name }}</h1>
     </div>
     <div class="container">
         <div class="row">
@@ -20,9 +20,18 @@
                 <div class="col-md-3 pro-1">
                     <div class="col-m">
                         <div class="mid-2 text-center">
-                        <label for="">{{article.title}}</label>
+                            <a href="{{ path('default_article', {
+                                'alias' : article.alias,
+                                'category' : article.category.alias,
+                                'id' : article.id
+                            }) }}">
+                        <label for="">{{article.title}}</label></a>
                         </div>
-                        <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+                        <a href="{{ path('default_article', {
+                            'alias' : article.alias,
+                            'category' : article.category.alias,
+                            'id' : article.id
+                        }) }}">
                             <img src="{{ asset ( 'images/' ~ article.image )}}" width="200em" class="img-responsive" alt="{{article.title}}">
                         </a>
                         <div class="mid-1">
@@ -44,7 +53,8 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="add">
-                                <button class="btn btn-info my-cart-btn my-cart-b" data-id="36" data-name="Baby Oil" data-summary="summary 36" data-price="6.00" data-quantity="1" data-image="images/of36.png">Panier</button>
+                                <button class="btn btn-info my-cart-btn my-cart-b" data-id="36" data-name="Baby Oil" data-summary="summary 36" data-price="6.00" data-quantity="1" data-image="images/of36.png">
+                                    <a href="{{ path('panier_add', {'id':article.id}) }}">Ajouter au panier</a></button>
                             </div>
 
                         </div>

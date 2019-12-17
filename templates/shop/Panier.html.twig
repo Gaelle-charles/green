@@ -26,12 +26,12 @@
                             <tbody>
                             {% for item in items %}
                                 <tr>
-                                    <td>{{ item.product.title }}</td>
-                                    <td>{{ item.product.price }}</td>
+                                    <td>{{ item.article.title }}</td>
+                                    <td>{{ item.article.price }}</td>
                                     <td>{{ item.quantity }}</td>
-                                    <td>{{ item.product.price * item.quantity }}</td>
+                                    <td>{{ item.article.price * item.quantity }}</td>
                                     <td>
-                                        <a href="{{ path('panier_remove', {'id': item.product.id}) }}" class="btn btn-danger btn-sm">
+                                        <a href="{{ path('panier_remove', {'id': item.article.id}) }}" class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash"></i>
                                         </a>
                                     </td>
