@@ -8,10 +8,11 @@
     <div class="container">
         <div class="row">
             <div class=" con-w3l agileinf">
+                {% if articles is not empty %}
                 {% for article in articles %}
                 <div class="col-md-3 pro-1">
                     <div class="col-m">
-                        <div class="mid-2">
+                        <div class="mid-2 text-center">
                         <label for="">{{article.title}}</label>
                         </div>
                         <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
@@ -26,10 +27,13 @@
                                     }) }}">{{article.content|striptags}}</a></h6>
                             </div>
                             <div class="mid-2">
-                                <p ><label>{{article.price}} €</label></p>
-{#                                <div class="block">#}
-{#                                    <div class="starbox small ghosting"> </div>#}
-{#                                </div>#}
+                                <div class="pr-single">
+
+                                    <p><mark><strong>{{article.price}} €</strong></mark></p>
+                                </div>
+                                <div class="block">
+                                    <div class="starbox small ghosting"> </div>
+                                </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="add">
@@ -40,6 +44,11 @@
                     </div>
                 </div>
                 {% endfor %}
+                {% else %}
+                    <div class="col alert alert-warning text-center">
+                        Aucune publication pour le moment
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

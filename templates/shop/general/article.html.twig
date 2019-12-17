@@ -1,31 +1,63 @@
 {% extends "indexLayout.html.twig" %}
 
 {% block title %}
+    {{ category.name | name }}
+{% endblock %}
+
+{% block title %}
     {{ article.title | title}}
 {% endblock %}
 
 {% block content %}
     <div class="p-3 mx-auto text-center">
-        <h1 class="display-4">
-            {{ article.title | title}}
-        </h1>
+        <h1 class="display-4">{{ category.name | name }}</h1>
     </div>
-
-    <div class="py-5 bg-light">
-        <div class="container ">
-            {% for message in app.flashes('notice') %}
-                <div class="flash-notice">
-                    {{ message }}
+    <div class="single">
+        <div class="container">
+            <div class="single-top-main">
+                <div class="col-md-5 single-top">
+                    <div class="single-w3agile">
+                     <h2> <strong>{{ article.title | title}}</strong></h2>
+                        <div id="picture-frame" style="position: relative; overflow: hidden; cursor: crosshair;">
+                            <img src="{{ asset ( 'images/' ~ article.image )}}" alt="" class="img-responsive">
+                    </div>
                 </div>
-            {% endfor %}
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="img-fluid" src="{{ asset ( 'images/' ~ article.image )}}" alt="{{article.title}}">
-                </div> <!-- Fin col-md-6 -->
-                <div class="col-md-6">
-                    {{ article.content | raw }}
-                </div> <!-- Fin col-md-6 -->
-            </div> <!-- Fin row -->
-        </div> <!-- Fin container -->
-    </div> <!-- Fin py-5 bg-light -->
+                <div class="col-md-7 single-top-left ">
+                    <div class="single-right">
+                        <div class="pr-single">
+                            <h2><p class="reduced"><strong>{{article.price}} €</strong></p></h2>
+                        </div>
+                        <div class="block block-w3">
+                            <div class="starbox small ghosting"><div class="positioner"><div class="stars"><div class="ghost" style="display: none; width: 42.5px;"></div><div class="colorbar" style="width: 42.5px;"></div><div class="star_holder"><div class="star star-0"></div><div class="star star-1"></div><div class="star star-2"></div><div class="star star-3"></div><div class="star star-4"></div></div></div></div></div>
+                        </div>
+                        <p class="in-pa">{{ article.content | raw }}</p>
+
+                        <ul class="social-top">
+                            <li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
+                            <li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
+                            <li><a href="#" class="icon pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i><span></span></a></li>
+                            <li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
+                        </ul>
+                        <div class="add add-3">
+                            <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Wheat" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/si.jpg">Ajouter au panier</button>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <br>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="./{{ asset('js/jquery.zoomtoo.js') }}"></script>
+    <script>
+        $(function() {
+            $("#picture-frame").zoomToo({
+                magnify: 1
+            });
+        });
+    </script>
 {% endblock %}
